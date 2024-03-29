@@ -1,0 +1,50 @@
+module practice;
+  typedef enum{male , female , other}gender;
+  typedef enum {red , green , blue, yellow} light_e;
+  light_e lte=red;
+  gender g1;
+ 
+ initial begin
+   $cast(g1,1);
+  case (g1)
+      male : begin
+        $display("g1=%0d name =%0s",g1,g1.name);
+      end
+      female : begin
+        $display("g1=%0d name =%0s",g1,g1.name);
+      end
+      default : begin
+        $display("this is default");
+      end
+    endcase
+   case (lte)
+     red : begin
+       $display("%s",lte.name);
+     end
+     green : begin
+       $display("%s",lte.name);
+     end
+     blue : begin
+       $display("%s",lte.name);
+     end
+     yellow : begin
+       $display("%s",lte.name);
+     end
+   endcase
+     
+  end
+  initial begin
+repeat(4) begin
+      lte=lte.next();
+       $display(lte.name);
+     end
+    lte=lte.first();
+    $display(lte.name);
+    lte=lte.last();
+    $display(lte.name);
+    lte=lte.prev(2);
+    $display(lte.name);
+    $display("%d",lte.num);
+    $display("%d",g1.num);
+  end
+endmodule

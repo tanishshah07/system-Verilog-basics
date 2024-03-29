@@ -1,0 +1,33 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/indicus_material/SV_at_indicus/max_value
+vmax_value
+DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 AaJb2DX3?z_cQFHCl:AZ?2
+I5m;n2Cm[fPM5K^fXcO4>I2
+!s105 max_sv_unit
+S1
+dE:/indicus_material/SV_at_indicus/sv_assignment(1to 6)/max_value
+w1711629415
+8max.sv
+Fmax.sv
+L0 1
+OL;L;10.7c;67
+31
+!s108 1711629440.000000
+!s107 max.sv|
+!s90 -reportprogress|300|max.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0
