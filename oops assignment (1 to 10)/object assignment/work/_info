@@ -1,0 +1,67 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/oops assignment (1 to 6)/object assignment
+T_opt
+!s110 1711989292
+VU0Z?Eb3k=JVIKB_GT`LTl2
+04 11 4 work exp_sv_unit fast 0
+04 7 4 work ob_asin fast 0
+=1-c85b76258d3a-660ae229-1c0-17ac
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+Xexp_sv_unit
+Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+V1hB99[UU<no`aZ::9nCl<0
+r1
+!s85 0
+!i10b 1
+!s100 EY>8R[lGfi[z]6S^32ha20
+I1hB99[UU<no`aZ::9nCl<0
+!i103 1
+S1
+R0
+Z3 w1711989262
+Z4 8exp.sv
+Z5 Fexp.sv
+L0 1
+Z6 OL;L;10.7c;67
+31
+Z7 !s108 1711989286.000000
+Z8 !s107 exp.sv|
+Z9 !s90 exp.sv|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vob_asin
+R2
+DXx4 work 11 exp_sv_unit 0 22 1hB99[UU<no`aZ::9nCl<0
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 nSLOPKHS]fLTMC]OUkNch2
+I??cVmnIHIQWOgTBb:SVWa1
+!s105 exp_sv_unit
+S1
+R0
+R3
+R4
+R5
+L0 9
+R6
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1

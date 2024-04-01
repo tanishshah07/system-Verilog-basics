@@ -1,0 +1,39 @@
+Start time: 22:04:46 on Apr 01,2024
+qverilog exp.sv 
+-- Compiling package exp_sv_unit
+-- Compiling module ob_asin
+** Warning: exp.sv(15): (qverilog-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+** Warning: exp.sv(30): (qverilog-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+
+Top level modules:
+	ob_asin
+# vsim -lib work work.exp_sv_unit work.ob_asin -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: exp.sv(15): (vopt-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+# ** Warning: exp.sv(30): (vopt-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+# ** Warning: exp.sv(4): (vopt-2250) Function "dis" has no return value assignment.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.exp_sv_unit(fast)
+# Loading work.ob_asin(fast)
+# run -all
+# the values is a=          3 b=          6
+# the address is  after e1=e2 e1=65538 e2=65538
+# the address is after e1=null e1=null e2=65538
+# the values is a=         99 b=          6
+#  quit -f
+# End time: 22:04:54 on Apr 01,2024, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 5
