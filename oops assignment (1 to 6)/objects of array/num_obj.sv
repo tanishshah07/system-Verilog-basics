@@ -1,0 +1,19 @@
+class nu;
+int i;
+int j;
+function void dic();
+$display("the i and j are %d %d",i,j);
+endfunction
+endclass
+
+module obj();
+nu ob[2:0];
+int nu_obj;
+initial begin
+ ob[2]=new();
+ ob[1]=new();
+nu_obj=ob.sum with (int'(item!=null));
+$display("the number of objects aree %d",nu_obj);
+end
+
+endmodule

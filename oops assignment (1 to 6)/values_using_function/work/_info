@@ -1,0 +1,67 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/oops assignment (1 to 6)/values_using_function
+T_opt
+!s110 1711945754
+Vg<`>_jAB5;D2`PY@ej@[n1
+04 14 4 work setter_sv_unit fast 0
+04 6 4 work setter fast 0
+=1-c85b76258d3a-660a3819-37d-8b8
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+vsetter
+Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+DXx4 work 14 setter_sv_unit 0 22 8;@XDQkOoV58C@ME0eSR83
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 9f`=03R_?U`aG=YTWhae90
+I77MYlB7NQgWoGdSz>R:n80
+!s105 setter_sv_unit
+S1
+R0
+Z3 w1711945736
+Z4 8setter.sv
+Z5 Fsetter.sv
+L0 11
+Z6 OL;L;10.7c;67
+31
+Z7 !s108 1711945751.000000
+Z8 !s107 setter.sv|
+Z9 !s90 setter.sv|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Xsetter_sv_unit
+R2
+V8;@XDQkOoV58C@ME0eSR83
+r1
+!s85 0
+!i10b 1
+!s100 3?EMc`=:XO[e0ZXibMO3U2
+I8;@XDQkOoV58C@ME0eSR83
+!i103 1
+S1
+R0
+R3
+R4
+R5
+L0 1
+R6
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1

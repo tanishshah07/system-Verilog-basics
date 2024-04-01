@@ -1,0 +1,21 @@
+class get;
+  int a,b;
+  int c=8;
+  
+  function void getr();
+    $display("a:%0d,b:%0d,c:%0d",a,b,c);
+  endfunction
+endclass
+
+
+module exp();
+  
+ initial begin
+  get g1;
+   g1=new();
+   g1.a=4;
+   g1.getr();
+   $display("the properties are %p",g1);
+   $display("the address is %d",g1);
+ end
+endmodule

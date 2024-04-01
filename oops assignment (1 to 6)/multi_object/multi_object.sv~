@@ -1,0 +1,32 @@
+class multi;
+ int num;
+ string str;
+ 
+ function void dis();
+  $display("the string is %s and number is %d",str,num);
+ endfunction
+endclass
+
+module exp();
+ 
+multi m1,m2;
+initial begin
+ m1=new();
+ 
+ //m2=m1;
+ m1.str="tanish";
+ m1.num=23;
+ m1.dis();
+ m2.str="hello";
+ m2.num=17;
+ m2.dis();
+ #10 m2=null;
+ end
+ initial begin
+  #5 $finish;
+  
+ 
+ end
+
+
+endmodule
