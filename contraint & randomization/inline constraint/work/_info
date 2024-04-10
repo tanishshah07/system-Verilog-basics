@@ -1,0 +1,44 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/contraint & randomization/inline constraint
+T_opt
+!s110 1712725884
+VK_nj0A_3nVlJ6<E`IG;I90
+04 10 4 work inline_con fast 0
+=1-c85b76258d3a-66161f7c-1a9-8cc
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+R0
+vinline_con
+DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1712725881
+!i10b 1
+!s100 lS6HY7kTin@@56aSBC]6G3
+IFJHfSBa5V@7<UagW]TY^;1
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 inline_con_sv_unit
+S1
+R0
+w1712725878
+8inline_con.sv
+Finline_con.sv
+L0 1
+OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1712725881.000000
+!s107 inline_con.sv|
+!s90 inline_con.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1

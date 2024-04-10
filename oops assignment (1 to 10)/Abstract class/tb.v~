@@ -1,0 +1,77 @@
+`timescale 1ns / 1ps
+
+module i2c_testbench;
+
+    // Parameters
+    parameter CLK_PERIOD = 10; // Clock period in ns
+
+    // Signals
+    reg clk = 0;
+    reg rst = 1;
+    reg reg_start;
+    reg reg_ack;
+    reg reg_busy;
+    reg reg_wdata;
+    wire reg_wready;
+    wire reg_rvalid;
+    reg reg_rdata;
+    wire scl;
+    wire sda;
+
+    // Instantiate master and slave
+    i2c_master master (
+        .clk(clk),
+        .rst(rst),
+        .scl(scl),
+        .sda(sda),
+        .reg_start(reg_start),
+        .reg_ack(reg_ack),
+        .reg_busy(reg_busy),
+        .reg_wdata(reg_wdata),
+        .reg_wready(reg_wready)
+    );
+
+    i2c_slave slave (
+        .clk(clk),
+        .rst(rst),
+        .scl(scl),
+        .sda(sda),
+        .reg_start(reg_start),
+        .reg_ack(reg_ack),
+        .reg_busy(reg_busy),
+        .reg_rdata(reg_rdata),
+        .reg_rvalid(reg_rvalid)
+    );
+
+    // Clock generation
+    always #((CLK_PERIOD)/2) clk = ~clk;
+
+    // Initial reset
+    initial begin
+        #100;
+        rst = 0;
+        #100;
+        rst = 1;
+    end
+
+    // Test sequence
+    initial begin
+        #200;
+        reg_start = 1; // Send start condition
+        reg_wdata = 8'hA5; // Data to be sent
+        #100;
+        reg_start = 0; // Clear start condition
+        #100;
+        reg_wdata = 8'hFF; // Send another data
+        #100;
+        reg_start = 1; // Send start condition for read
+        #100;
+        reg_start = 0; // Clear start condition
+        #200;
+        $display("Received data from slave: %h", reg_rdata); // Display received data
+        #100;
+        $finish; // End simulation
+    end
+
+endmodule
+

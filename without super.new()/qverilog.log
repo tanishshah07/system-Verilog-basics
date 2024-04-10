@@ -1,0 +1,6 @@
+Start time: 11:53:04 on Apr 05,2024
+qverilog m.sv 
+-- Compiling module m
+** Error: m.sv(24): Number of actuals and formals does not match in function call.
+End time: 11:53:04 on Apr 05,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0

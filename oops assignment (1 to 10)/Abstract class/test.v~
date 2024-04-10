@@ -1,0 +1,154 @@
+// I2C Master module
+module i2c_master (
+    input wire clk,          // Clock input
+    input wire rst,          // Reset input
+    output wire scl,         // Serial clock output
+    inout wire sda,          // Serial data bidirectional
+    output wire reg_start,   // Start condition signal
+    input wire reg_ack,      // Acknowledge signal from slave
+    input wire reg_busy,     // Busy signal from slave
+    output reg reg_wdata,    // Data to be sent
+    input wire reg_wready    // Ready signal from slave to receive data
+);
+
+// Internal states
+typedef enum logic [2:0] {
+    IDLE,
+    SEND_START,
+    SEND_ADDR,
+    SEND_DATA,
+    WAIT_ACK
+} state_t;
+
+reg [2:0] state;            // Current state
+reg [6:0] bit_counter;      // Bit counter
+reg [7:0] address;          // Slave address
+reg [7:0] data_out;         // Data to be sent
+
+// State machine
+always_ff @(posedge clk, posedge rst) begin
+    if (rst) begin
+        state <= IDLE;
+        bit_counter <= 0;
+    end else begin
+        case (state)
+            IDLE: begin
+                if (reg_start) begin
+                    state <= SEND_START;
+                    scl <= 0;
+                    sda <= 1;
+                    bit_counter <= 0;
+                end
+            end
+            SEND_START: begin
+                sda <= 0;
+                scl <= 1;
+                state <= SEND_ADDR;
+            end
+            SEND_ADDR: begin
+                sda <= address[bit_counter];
+                scl <= 1;
+                if (bit_counter == 7)
+                    state <= SEND_DATA;
+                bit_counter <= bit_counter + 1;
+            end
+            SEND_DATA: begin
+                sda <= data_out[bit_counter];
+                scl <= 1;
+                if (bit_counter == 7)
+                    state <= WAIT_ACK;
+                bit_counter <= bit_counter + 1;
+            end
+            WAIT_ACK: begin
+                scl <= 1;
+                if (reg_ack)
+                    state <= IDLE;
+            end
+        endcase
+    end
+end
+
+// Interface for writing data
+always @(posedge clk) begin
+    if (reg_wready)
+        reg_wdata <= 0; // Reset data to be sent
+end
+
+endmodule
+
+
+// I2C Slave module
+module i2c_slave (
+    input wire clk,          // Clock input
+    input wire rst,          // Reset input
+    input wire scl,          // Serial clock input
+    inout wire sda,          // Serial data bidirectional
+    input wire reg_start,    // Start condition signal from master
+    output wire reg_ack,     // Acknowledge signal to master
+    output wire reg_busy,    // Busy signal to master
+    output reg reg_rdata,    // Received data
+    output wire reg_rvalid   // Data valid signal to master
+);
+
+// Internal states
+typedef enum logic [2:0] {
+    IDLE,
+    RECEIVE_ADDR,
+    RECEIVE_DATA
+} state_t;
+
+reg [2:0] state;            // Current state
+reg [6:0] bit_counter;      // Bit counter
+reg [7:0] address;          // Slave address
+reg [7:0] data_in;          // Received data
+
+// State machine
+always_ff @(posedge clk, posedge rst) begin
+    if (rst) begin
+        state <= IDLE;
+        bit_counter <= 0;
+    end else begin
+        case (state)
+            IDLE: begin
+                if (reg_start) begin
+                    state <= RECEIVE_ADDR;
+                    sda <= 1;
+                    reg_ack <= 0;
+                    reg_busy <= 1;
+                    bit_counter <= 0;
+                end
+            end
+            RECEIVE_ADDR: begin
+                if (scl) begin
+                    address[bit_counter] <= sda;
+                    bit_counter <= bit_counter + 1;
+                    if (bit_counter == 7) begin
+                        state <= RECEIVE_DATA;
+                    end
+                end
+            end
+            RECEIVE_DATA: begin
+                if (scl) begin
+                    data_in[bit_counter] <= sda;
+                    bit_counter <= bit_counter + 1;
+                    if (bit_counter == 7) begin
+                        state <= IDLE;
+                        reg_ack <= 1;
+                        reg_busy <= 0;
+                        reg_rdata <= data_in;
+                        reg_rvalid <= 1;
+                    end
+                end
+            end
+        endcase
+    end
+end
+
+// Interface for reading data
+always @(posedge clk) begin
+    if (reg_rvalid)
+        reg_rvalid <= 0; // Reset data valid signal
+end
+
+endmodule
+

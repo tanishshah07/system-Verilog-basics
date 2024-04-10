@@ -1,0 +1,35 @@
+Start time: 13:59:53 on Apr 10,2024
+qverilog dis_con.sv 
+-- Compiling module dis_con
+** Warning: dis_con.sv(20): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+
+Top level modules:
+	dis_con
+# vsim -lib work work.dis_con -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: dis_con.sv(20): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.dis_con(fast)
+# run -all
+# X=1010 | Y=          7
+# X=1101 | Y=          7
+# X=0100 | Y=         10
+# X=1110 | Y= -905636754
+# X=1110 | Y= -905636754
+#  quit -f
+# End time: 13:59:57 on Apr 10,2024, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2

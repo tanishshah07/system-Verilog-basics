@@ -1,0 +1,13 @@
+Start time: 15:02:06 on Apr 05,2024
+qverilog nested.sv 
+-- Compiling module nested
+** Error: nested.sv(18): 'my_pkt' is an unknown type.
+Or did you omit the '()' for an instantiation?
+** Error: nested.sv(19): 'sample' is an unknown type.
+Or did you omit the '()' for an instantiation?
+** Error: nested.sv(26): 'mp1' is not a variable
+** Error: nested.sv(26): Illegal LHS of assignment.
+** Error: nested.sv(26): 'new' must be used to assign to a class or covergroup handle.
+** Error (suppressible): (qverilog-13276) nested.sv(27): Could not find field/method name (mp1) in 'p1' of 'p1.mp1.s1.count'.
+End time: 15:02:06 on Apr 05,2024, Elapsed time: 0:00:00
+Errors: 6, Warnings: 0

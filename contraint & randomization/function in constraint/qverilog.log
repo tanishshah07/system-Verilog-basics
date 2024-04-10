@@ -1,0 +1,7 @@
+Start time: 12:45:55 on Apr 10,2024
+qverilog fun__in_con.sv 
+-- Compiling module fun_in_con
+** Error: fun__in_con.sv(9): Function with return type of void cannot be used in/as an expression.
+fun__in_con.sv(37): Verilog Compiler exiting
+End time: 12:45:56 on Apr 10,2024, Elapsed time: 0:00:01
+Errors: 1, Warnings: 0

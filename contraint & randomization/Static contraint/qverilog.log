@@ -1,0 +1,56 @@
+Start time: 15:01:13 on Apr 10,2024
+qverilog exp.sv 
+-- Compiling module sta_con
+** Warning: exp.sv(27): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+** Warning: exp.sv(33): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+
+Top level modules:
+	sta_con
+# vsim -lib work work.sta_con -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: exp.sv(27): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: exp.sv(33): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.sta_con(fast)
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$dipslay' is not defined.
+#    Time: 0 ns  Iteration: 0  Instance: /sta_con File: exp.sv Line: 31
+# run -all
+# X=         40 | Y=0101
+# X=         38 | Y=0111
+# X=         62 | Y=0001
+# X=         28 | Y=0100
+# X=         52 | Y=0101
+# X=         45 | Y=0110
+# X=         64 | Y=0100
+# X=         61 | Y=0011
+# X=         35 | Y=0111
+# X=         36 | Y=1000
+# ** Error (suppressible): (vsim-12023) Cannot execute undefined system task/function '$dipslay'
+#    Time: 0 ns  Iteration: 0  Process: /sta_con/#INITIAL#22 File: exp.sv Line: 31
+# X=         38 | Y=0000
+# X=         60 | Y=0100
+# X=         76 | Y=1010
+# X=         70 | Y=1001
+# X=         48 | Y=0011
+# X=         42 | Y=1011
+# X=         52 | Y=0010
+# X=         65 | Y=0101
+# X=         62 | Y=0000
+# X=         75 | Y=1100
+#  quit -f
+# End time: 15:01:18 on Apr 10,2024, Elapsed time: 0:00:05
+# Errors: 1, Warnings: 5

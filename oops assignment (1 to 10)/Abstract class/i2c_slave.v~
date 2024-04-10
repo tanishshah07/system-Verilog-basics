@@ -1,0 +1,71 @@
+// I2C Slave module
+module i2c_slave (
+    input wire clk,          // Clock input
+    input wire rst,          // Reset input
+    input wire scl,          // Serial clock input
+    inout wire sda,          // Serial data bidirectional
+    input wire reg_start,    // Start condition signal from master
+    output wire reg_ack,     // Acknowledge signal to master
+    output wire reg_busy,    // Busy signal to master
+    output reg reg_rdata,    // Received data
+    output wire reg_rvalid   // Data valid signal to master
+);
+  parameter IDLE = 2'd0,
+    RECEIVE_ADDR = 2'd1,
+    RECEIVE_DATA = 2'd2;
+
+reg [2:0] state;            // Current state
+reg [6:0] bit_counter;      // Bit counter
+reg [7:0] address;          // Slave address
+reg [7:0] data_in;          // Received data
+
+// State machine
+always_ff @(posedge clk, posedge rst) begin
+    if (rst) begin
+        state <= IDLE;
+        bit_counter <= 0;
+    end else begin
+        case (state)
+            IDLE: begin
+                if (reg_start) begin
+                    state <= RECEIVE_ADDR;
+                    sda <= 1;
+                    reg_ack <= 0;
+                    reg_busy <= 1;
+                    bit_counter <= 0;
+                end
+            end
+            RECEIVE_ADDR: begin
+                if (scl) begin
+                    address[bit_counter] <= sda;
+                    bit_counter <= bit_counter + 1;
+                    if (bit_counter == 7) begin
+                        state <= RECEIVE_DATA;
+                    end
+                end
+            end
+            RECEIVE_DATA: begin
+                if (scl) begin
+                    data_in[bit_counter] <= sda;
+                    bit_counter <= bit_counter + 1;
+                    if (bit_counter == 7) begin
+                        state <= IDLE;
+                        reg_ack <= 1;
+                        reg_busy <= 0;
+                        reg_rdata <= data_in;
+                        reg_rvalid <= 1;
+                    end
+                end
+            end
+        endcase
+    end
+end
+
+// Interface for reading data
+always @(posedge clk) begin
+    if (reg_rvalid)
+        reg_rvalid <= 0; // Reset data valid signal
+end
+
+endmodule
+

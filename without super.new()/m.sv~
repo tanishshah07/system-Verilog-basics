@@ -21,7 +21,7 @@ endclass
   p p1;
   initial begin
     p1=new(3);
-    c1=new(x);       //the only problem with the extends pass is not passes the variables
+    c1=new(x);
   
   end
 endmodule
