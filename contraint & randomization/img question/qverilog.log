@@ -1,0 +1,63 @@
+Start time: 19:16:26 on Apr 12,2024
+qverilog img.sv 
+-- Compiling module img
+** Warning: img.sv(34): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+
+Top level modules:
+	img
+# vsim -lib work work.img -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: img.sv(34): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.img(fast)
+# run -all
+#         256           0           0           0         256           0           0           0           0           0         256           0           0           0           0           0 
+# 
+#         256           0           0           0           0         256           0         256           0           0           0           0         256           0         256         256 
+# 
+#           0         256         256         256         256           0         256         256           0         256           0           0           0           0           0         256 
+# 
+#           0         256           0         256           0           0           0           0           0           0         256           0         256           0         256         256 
+# 
+#         256           0           0           0         256         256         256           0         256           0         256         256         256           0           0           0 
+# 
+#         256           0           0         256           0           0           0         256           0         256         256         256           0           0           0         256 
+# 
+#           0         256           0           0           0         256           0           0           0           0         256         256         256         256         256           0 
+# 
+#           0         256         256         256         256           0           0           0         256           0         256           0           0           0           0           0 
+# 
+#         256         256           0           0           0         256           0         256         256           0           0           0           0           0         256           0 
+# 
+#           0           0           0         256           0           0           0           0           0           0           0           0         256           0         256         256 
+# 
+#           0         256           0           0         256           0         256         256         256           0         256           0           0           0         256           0 
+# 
+#         256         256         256         256           0         256         256           0           0           0           0         256         256           0           0         256 
+# 
+#           0         256           0         256         256         256           0           0         256           0         256         256           0           0         256           0 
+# 
+#           0           0           0           0           0           0           0         256         256         256         256           0           0           0         256           0 
+# 
+#         256           0           0         256           0         256         256         256         256         256         256           0           0           0           0           0 
+# 
+#           0         256         256         256           0         256           0         256         256           0           0         256         256         256           0         256 
+# 
+# arr='{'{256, 0, 0, 0, 256, 0, 0, 0, 0, 0, 256, 0, 0, 0, 0, 0}, '{256, 0, 0, 0, 0, 256, 0, 256, 0, 0, 0, 0, 256, 0, 256, 256}, '{0, 256, 256, 256, 256, 0, 256, 256, 0, 256, 0, 0, 0, 0, 0, 256}, '{0, 256, 0, 256, 0, 0, 0, 0, 0, 0, 256, 0, 256, 0, 256, 256}, '{256, 0, 0, 0, 256, 256, 256, 0, 256, 0, 256, 256, 256, 0, 0, 0}, '{256, 0, 0, 256, 0, 0, 0, 256, 0, 256, 256, 256, 0, 0, 0, 256}, '{0, 256, 0, 0, 0, 256, 0, 0, 0, 0, 256, 256, 256, 256, 256, 0}, '{0, 256, 256, 256, 256, 0, 0, 0, 256, 0, 256, 0, 0, 0, 0, 0}, '{256, 256, 0, 0, 0, 256, 0, 256, 256, 0, 0, 0, 0, 0, 256, 0}, '{0, 0, 0, 256, 0, 0, 0, 0, 0, 0, 0, 0, 256, 0, 256, 256}, '{0, 256, 0, 0, 256, 0, 256, 256, 256, 0, 256, 0, 0, 0, 256, 0}, '{256, 256, 256, 256, 0, 256, 256, 0, 0, 0, 0, 256, 256, 0, 0, 256}, '{0, 256, 0, 256, 256, 256, 0, 0, 256, 0, 256, 256, 0, 0, 256, 0}, '{0, 0, 0, 0, 0, 0, 0, 256, 256, 256, 256, 0, 0, 0, 256, 0}, '{256, 0, 0, 256, 0, 256, 256, 256, 256, 256, 256, 0, 0, 0, 0, 0}, '{0, 256, 256, 256, 0, 256, 0, 256, 256, 0, 0, 256, 256, 256, 0, 256}}
+#  quit -f
+# End time: 19:16:30 on Apr 12,2024, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2

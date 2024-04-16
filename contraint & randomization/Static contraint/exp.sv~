@@ -33,9 +33,5 @@ repeat(10) begin
   e2.randomize();
   e2.dis();
 end
-
-
 end
-
-
 endmodule

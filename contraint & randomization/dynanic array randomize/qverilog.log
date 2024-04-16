@@ -1,0 +1,266 @@
+Start time: 14:52:52 on Apr 12,2024
+qverilog drr_r.sv 
+-- Compiling module drr_r
+** Warning: drr_r.sv(36): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+
+Top level modules:
+	drr_r
+# vsim -lib work work.drr_r -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: drr_r.sv(36): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.drr_r(fast)
+# run -all
+# darr[0]==21
+# darr[1]==40
+# darr[2]==7
+# darr[3]==8
+# darr[4]==63
+# darr[5]==88
+# darr[6]==21
+# darr[7]==64
+# darr[8]==35
+# darr[9]==32
+# darr[10]==7
+# darr[11]==56
+# darr[12]==91
+# darr[13]==88
+# darr[14]==7
+# darr[15]==96
+# darr[16]==91
+# darr[17]==32
+# darr[18]==21
+# darr[19]==96
+# darr[20]==49
+# darr[21]==80
+# darr[22]==91
+# darr[23]==16
+# darr[24]==63
+# darr[25]==48
+# darr[26]==63
+# darr[0]==7
+# darr[1]==80
+# darr[2]==21
+# darr[3]==40
+# darr[4]==35
+# darr[5]==64
+# darr[6]==63
+# darr[7]==96
+# darr[8]==7
+# darr[9]==80
+# darr[10]==49
+# darr[11]==56
+# darr[12]==7
+# darr[13]==80
+# darr[14]==63
+# darr[15]==96
+# darr[16]==91
+# darr[17]==64
+# darr[18]==49
+# darr[19]==88
+# darr[20]==21
+# darr[21]==16
+# darr[22]==91
+# darr[0]==63
+# darr[1]==24
+# darr[2]==63
+# darr[3]==48
+# darr[4]==49
+# darr[5]==16
+# darr[6]==77
+# darr[7]==40
+# darr[8]==91
+# darr[9]==72
+# darr[10]==63
+# darr[11]==40
+# darr[12]==91
+# darr[13]==48
+# darr[14]==63
+# darr[15]==64
+# darr[16]==91
+# darr[17]==40
+# darr[18]==7
+# darr[19]==16
+# darr[20]==49
+# darr[0]==21
+# darr[1]==80
+# darr[2]==49
+# darr[3]==72
+# darr[4]==77
+# darr[5]==88
+# darr[6]==91
+# darr[7]==32
+# darr[8]==91
+# darr[9]==72
+# darr[10]==63
+# darr[11]==16
+# darr[12]==63
+# darr[13]==64
+# darr[14]==91
+# darr[15]==24
+# darr[16]==91
+# darr[17]==96
+# darr[18]==91
+# darr[19]==32
+# darr[20]==77
+# darr[21]==32
+# darr[22]==77
+# darr[0]==7
+# darr[1]==40
+# darr[2]==63
+# darr[3]==48
+# darr[4]==7
+# darr[5]==96
+# darr[6]==7
+# darr[7]==40
+# darr[8]==91
+# darr[9]==64
+# darr[10]==63
+# darr[11]==48
+# darr[12]==7
+# darr[13]==32
+# darr[14]==35
+# darr[15]==72
+# darr[16]==7
+# darr[17]==88
+# darr[18]==77
+# darr[19]==88
+# darr[20]==35
+# darr[21]==48
+# darr[22]==49
+# darr[23]==24
+# darr[24]==63
+# darr[0]==77
+# darr[1]==16
+# darr[2]==77
+# darr[3]==8
+# darr[4]==63
+# darr[5]==72
+# darr[6]==35
+# darr[7]==16
+# darr[8]==63
+# darr[9]==96
+# darr[10]==35
+# darr[11]==40
+# darr[12]==7
+# darr[13]==96
+# darr[14]==7
+# darr[15]==72
+# darr[16]==49
+# darr[17]==64
+# darr[18]==77
+# darr[19]==80
+# darr[20]==7
+# darr[0]==7
+# darr[1]==24
+# darr[2]==7
+# darr[3]==96
+# darr[4]==63
+# darr[5]==72
+# darr[6]==7
+# darr[7]==48
+# darr[8]==77
+# darr[9]==64
+# darr[10]==35
+# darr[11]==24
+# darr[12]==35
+# darr[13]==64
+# darr[14]==7
+# darr[15]==32
+# darr[16]==7
+# darr[17]==72
+# darr[18]==35
+# darr[19]==32
+# darr[20]==7
+# darr[21]==72
+# darr[22]==49
+# darr[23]==16
+# darr[0]==77
+# darr[1]==32
+# darr[2]==91
+# darr[3]==80
+# darr[4]==35
+# darr[5]==48
+# darr[6]==91
+# darr[7]==64
+# darr[8]==49
+# darr[9]==72
+# darr[10]==77
+# darr[11]==16
+# darr[12]==63
+# darr[13]==80
+# darr[14]==21
+# darr[15]==96
+# darr[16]==63
+# darr[17]==88
+# darr[18]==7
+# darr[19]==96
+# darr[20]==63
+# darr[0]==49
+# darr[1]==48
+# darr[2]==77
+# darr[3]==24
+# darr[4]==63
+# darr[5]==72
+# darr[6]==7
+# darr[7]==80
+# darr[8]==77
+# darr[9]==8
+# darr[10]==49
+# darr[11]==56
+# darr[12]==77
+# darr[13]==56
+# darr[14]==63
+# darr[15]==16
+# darr[16]==7
+# darr[17]==8
+# darr[18]==21
+# darr[19]==16
+# darr[20]==49
+# darr[21]==64
+# darr[0]==35
+# darr[1]==80
+# darr[2]==91
+# darr[3]==32
+# darr[4]==63
+# darr[5]==48
+# darr[6]==49
+# darr[7]==96
+# darr[8]==21
+# darr[9]==80
+# darr[10]==91
+# darr[11]==88
+# darr[12]==35
+# darr[13]==8
+# darr[14]==35
+# darr[15]==16
+# darr[16]==77
+# darr[17]==8
+# darr[18]==63
+# darr[19]==16
+# darr[20]==49
+# darr[21]==96
+# darr[22]==63
+# darr[23]==88
+# darr[24]==77
+# darr[25]==72
+# darr[26]==63
+# darr[27]==48
+# darr[28]==7
+#  quit -f
+# End time: 14:52:56 on Apr 12,2024, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 2

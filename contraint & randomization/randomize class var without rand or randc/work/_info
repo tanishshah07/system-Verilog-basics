@@ -1,0 +1,43 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/contraint & randomization/randomize class var without rand or randc
+T_opt
+!s110 1712899672
+V4NXz0VCR6Na3YLF=_?LHi3
+04 2 4 work ex fast 0
+=1-c85b76258d3a-6618c657-3bb-3480
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+vex
+DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1712899669
+!i10b 1
+!s100 S5ifVVYQE?Al:h[;cOnef2
+In=H9ezZo;LeIOo=nCUBCZ0
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 rand_sv_unit
+S1
+R0
+w1712899666
+8rand.sv
+Frand.sv
+L0 4
+OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1712899669.000000
+!s107 rand.sv|
+!s90 rand.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1

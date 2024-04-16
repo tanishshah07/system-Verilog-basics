@@ -1,0 +1,58 @@
+Start time: 10:14:36 on Apr 12,2024
+qverilog no_of_one.sv 
+-- Compiling module no_of_one
+
+Top level modules:
+	no_of_one
+# vsim -lib work work.no_of_one -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.no_of_one(fast)
+# run -all
+# nu is 00000000000000000000000000000000
+# ** Error: randomize is failed
+#    Time: 0 ns  Scope: no_of_one File: no_of_one.sv Line: 34
+# nu is 00000000000000000000000000000000
+# ** Error: randomize is failed
+#    Time: 0 ns  Scope: no_of_one File: no_of_one.sv Line: 34
+# nu is 00000000000000000000000000000000
+# ** Error: randomize is failed
+#    Time: 0 ns  Scope: no_of_one File: no_of_one.sv Line: 34
+# nu is 00000000000000000000000000000000
+# ** Error: randomize is failed
+#    Time: 0 ns  Scope: no_of_one File: no_of_one.sv Line: 34
+# nu is 00000000000000000000000000000000
+# ** Error: randomize is failed
+#    Time: 0 ns  Scope: no_of_one File: no_of_one.sv Line: 34
+# nu is 00000000000000000000000000000000
+# ** Error: randomize is failed
+#    Time: 0 ns  Scope: no_of_one File: no_of_one.sv Line: 34
+# nu is 00000000000000000000000000000000
+# ** Error: randomize is failed
+#    Time: 0 ns  Scope: no_of_one File: no_of_one.sv Line: 34
+# nu is 00000000000000000000000000000000
+# ** Error: randomize is failed
+#    Time: 0 ns  Scope: no_of_one File: no_of_one.sv Line: 34
+# nu is 00000000000000000000000000000000
+# ** Error: randomize is failed
+#    Time: 0 ns  Scope: no_of_one File: no_of_one.sv Line: 34
+# nu is 00000000000000000000000000000000
+# ** Error: randomize is failed
+#    Time: 0 ns  Scope: no_of_one File: no_of_one.sv Line: 34
+#  quit -f
+# End time: 10:16:12 on Apr 12,2024, Elapsed time: 0:01:36
+# Errors: 10, Warnings: 0

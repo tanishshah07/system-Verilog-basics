@@ -1,0 +1,43 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/contraint & randomization/override a contraint without using soft
+T_opt
+!s110 1713168920
+VJSEn4c`fT7I1G`dWX]Xeb2
+04 9 4 work over_soft fast 0
+=1-c85b76258d3a-661ce217-3cb-12dc
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+vover_soft
+DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1713168917
+!i10b 1
+!s100 =V_?AT]EY6A833Ui@jCEL0
+I28gTU;FbRHjl76I?4JZXV2
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 over_con_sv_unit
+S1
+R0
+w1713168904
+8over_con.sv
+Fover_con.sv
+L0 3
+OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1713168916.000000
+!s107 over_con.sv|
+!s90 over_con.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1

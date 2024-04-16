@@ -8,26 +8,36 @@ z2
 !i10f 100
 cModel Technology
 Z0 dE:/indicus_material/SV_at_indicus/data_type
+T_opt
+!s110 1713157272
+VQ31F8QHM>9I1zd6O^imP92
+04 3 4 work str fast 0
+=1-c85b76258d3a-661cb497-1ce-f84
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
 vstr
 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-VDg1SIo80bB@j0V0VzS_@n1
-r1
-!s85 0
+!s110 1713157268
 !i10b 1
 !s100 a^K]kA_Ri59ahkeSmJz2C1
 I852S1[f7zlDh8:hIA6_<R1
+VDg1SIo80bB@j0V0VzS_@n1
 !s105 string_sv_unit
 S1
 R0
-w1711441520
+w1711441580
 8string.sv
 Fstring.sv
 L0 1
 OL;L;10.7c;67
+r1
+!s85 0
 31
-!s108 1711441542.000000
+!s108 1713157268.000000
 !s107 string.sv|
-!s90 -reportprogress|300|string.sv|
+!s90 string.sv|
 !i113 0
 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-tCvgOpt 0
+R1

@@ -28,7 +28,7 @@ repeat(10) begin
   e1.dis();
 end
 e1.con2.constraint_mode(0);   // as con2 is static it is also getting off for the e2 
-$dipslay(\n);
+$dipslay(\n" ");
 repeat(10) begin
   e2.randomize();
   e2.dis();

@@ -1,0 +1,43 @@
+module exp();
+
+class pat;
+rand int arr[5][5];
+
+constraint con1{
+ foreach(arr[i]){
+   foreach(arr[j]){
+     if(j!=0){
+     if(i>=j){
+       arr[i][j]==arr[i][j-1]**2;
+     }
+     else {
+        arr[i][j]==0;
+     }
+    }
+    else {
+      arr[i][j]==i+1;
+    
+    }
+   }
+ }
+}
+function void dis();
+	foreach(arr[i]) begin
+		for(int j=0;j<5;j++) begin
+	          $write("%d ",arr[i][j]);
+	        end
+		$display("\n");
+	end
+ $display("arr=%p",arr);
+endfunction
+endclass
+
+pat p1;
+initial begin
+ p1=new();
+ p1.randomize();
+ p1.dis();
+
+end
+
+endmodule

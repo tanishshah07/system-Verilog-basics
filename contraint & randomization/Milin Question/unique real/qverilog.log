@@ -1,0 +1,7 @@
+Start time: 16:51:11 on Apr 12,2024
+qverilog uni_real().sv 
+-- Compiling module uni_real
+** Error: uni_real().sv(5): Invalid data type for randc variable 'x'
+** Warning: uni_real().sv(20): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+End time: 16:51:11 on Apr 12,2024, Elapsed time: 0:00:00
+Errors: 1, Warnings: 1
