@@ -1,0 +1,22 @@
+module th_1();
+
+bit a,b;
+
+initial begin
+forever begin
+ @(posedge a);
+ fork 
+  begin
+   wait(b==1);
+  end
+  begin
+   #15;
+   #1;
+  end
+ join_any
+ disable fork
+    
+ end
+end
+  
+endmodule

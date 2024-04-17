@@ -7,13 +7,12 @@ class get;
   endfunction
 endclass
 
-
 module exp();
   
  initial begin
   get g1;
    g1=new();
-   g1.a=4;
+   g1.a<=4;
    g1.getr();
    $display("the properties are %p",g1);
    $display("the address is %d",g1);

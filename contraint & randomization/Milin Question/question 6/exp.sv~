@@ -20,11 +20,11 @@ constraint con2{
 	}
 	
 	foreach(arr2[i]){
-	 arr1[i] inside {[1:100]};
+	 arr2[i] inside {[1:100]};
 	}
 
 	foreach(arr3[i]){
-	 arr1[i] inside {[1:100]};
+	 arr3[i] inside {[1:100]};
 	}
  arr2.sum()<100;
  arr3.sum()>100;
@@ -34,6 +34,8 @@ function void dis();
   $display("arr1 = %p",arr1);
   $display("arr2 = %p",arr2);
   $display("arr3 = %p",arr3);
+  $display("arr2 sum is %d",arr2.sum());
+  $display("arr3 sum is %d",arr3.sum());
 endfunction
 endclass
 

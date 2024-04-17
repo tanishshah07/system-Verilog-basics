@@ -9,35 +9,103 @@ z2
 cModel Technology
 Z0 dE:/indicus_material/SV_at_indicus/contraint & randomization/Milin Question/question 6
 T_opt
-!s110 1712924219
-Vh4L?jdI;;@kA3I7Qc5lRn2
+!s110 1713260481
+VRk27>g_b]R4nRDRIjHXS:0
 04 3 4 work exp fast 0
-=1-c85b76258d3a-6619263b-8f-cac
-o-quiet -auto_acc_if_foreign -work work
-Z1 tCvgOpt 0
+=1-c85b76258d3a-661e47c1-7c-2f34
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
 n@_opt
-OL;O;10.7c;67
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1713261352
+V7^5dCz;D>HaT<H^0nRWT:2
+04 18 4 work question_6_sv_unit fast 0
+Z4 04 3 4 work top fast 0
+=1-c85b76258d3a-661e4b28-3c-2adc
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1713261927
+VbadOHGn[TW=4i3cfnPVBE1
+R4
+=1-c85b76258d3a-661e4d67-8f-33d0
+R1
+R2
+n@_opt2
+R3
 vexp
-DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-!s110 1712924216
+Z5 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1713260478
 !i10b 1
-!s100 ;FB^cDHmOa`h5hKV3FzG<2
-I5g@5WNXCiYZa89joCcZoa0
-VDg1SIo80bB@j0V0VzS_@n1
+!s100 8_TbH@i_YkVnecJQzP`Gb0
+I3oKL1N6Z7bW:97_1OA=>50
+Z6 VDg1SIo80bB@j0V0VzS_@n1
 !s105 exp_sv_unit
 S1
 R0
-w1712924215
+w1713260470
 8exp.sv
 Fexp.sv
 L0 4
-OL;L;10.7c;67
+Z7 OL;L;10.7c;67
 r1
 !s85 0
 31
-!s108 1712924216.000000
+!s108 1713260478.000000
 !s107 exp.sv|
 !s90 exp.sv|
 !i113 0
-o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Xquestion_6_sv_unit
+R5
+Vz01gd]04njU2k;F^>KVN81
+r1
+!s85 0
+!i10b 1
+!s100 L7nQV[z@l==FLm3Z1Y_:=1
+Iz01gd]04njU2k;F^>KVN81
+!i103 1
+S1
+R0
+w1713261347
+Z9 8question_6.sv
+Z10 Fquestion_6.sv
+L0 1
+R7
+31
+!s108 1713261349.000000
+Z11 !s107 question_6.sv|
+Z12 !s90 question_6.sv|
+!i113 0
+R8
+R2
+vtop
+R5
+!s110 1713261925
+!i10b 1
+!s100 z@n`YE8F=c1geCLW>Gm_N1
+IR7nL`XdDb<i0=Z6CUnWhh1
+R6
+!s105 question_6_sv_unit
+S1
+R0
+w1713261922
+R9
+R10
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1713261924.000000
+R11
+R12
+!i113 0
+R8
+R2

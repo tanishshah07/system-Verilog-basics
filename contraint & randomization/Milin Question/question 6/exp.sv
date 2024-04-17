@@ -34,6 +34,8 @@ function void dis();
   $display("arr1 = %p",arr1);
   $display("arr2 = %p",arr2);
   $display("arr3 = %p",arr3);
+  $display("arr2 sum is %d",arr2.sum());
+  $display("arr3 sum is %d",arr3.sum());
 endfunction
 endclass
 

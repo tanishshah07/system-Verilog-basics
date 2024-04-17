@@ -1,0 +1,26 @@
+module th_2();
+class exp;
+ task write();
+ $display($time,"Entering into the method");
+ #10;
+ $display($time,"Exiting from the method");
+ endtask
+endclass
+
+  exp e[4];
+  initial begin
+    foreach(e[i]) begin
+      e[i]=new();
+    end
+   fork
+     e[0].write();
+     e[1].write();
+     e[2].write();
+     e[3].write();
+   join
+  $display("hello tanish");  
+end
+
+
+  
+endmodule

@@ -1,6 +1,40 @@
-Start time: 19:15:26 on Apr 12,2024
-qverilog img.sv 
-** Error: (qverilog-7) Failed to open design unit file "img.sv" in read mode.
-No such file or directory. (errno = ENOENT)
-End time: 19:15:26 on Apr 12,2024, Elapsed time: 0:00:00
-Errors: 1, Warnings: 0
+Start time: 18:32:19 on Apr 16,2024
+qverilog exp.sv 
+-- Compiling module exp
+** Warning: exp.sv(38): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+
+Top level modules:
+	exp
+# vsim -lib work work.exp -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.exp(fast)
+# run -all
+#                     1                     0                     0                     0                     0 
+# 
+#                     2                     4                     0                     0                     0 
+# 
+#                     3                     9                    81                     0                     0 
+# 
+#                     4                    16                   256                 65536                     0 
+# 
+#                     5                    25                   625                390625          152587890625 
+# 
+# arr='{'{1, 0, 0, 0, 0}, '{2, 4, 0, 0, 0}, '{3, 9, 81, 0, 0}, '{4, 16, 256, 65536, 0}, '{5, 25, 625, 390625, 152587890625}}
+#  quit -f
+# End time: 18:32:24 on Apr 16,2024, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 1

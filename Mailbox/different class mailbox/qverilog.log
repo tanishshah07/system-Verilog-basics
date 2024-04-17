@@ -1,0 +1,68 @@
+Start time: 14:00:38 on Apr 16,2024
+qverilog diff_mailbox.sv 
+-- Compiling module diff_mailbox
+
+Top level modules:
+	diff_mailbox
+# vsim -lib work work.diff_mailbox -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.diff_mailbox(fast)
+# run -all
+# X is          27
+# number is           1
+# X is          21
+# number is           2
+# X is          33
+# number is           3
+# X is           1
+# number is           4
+# X is          13
+# number is           5
+# X is          19
+# number is           6
+# X is           7
+# number is           7
+# X is          19
+# number is           8
+# X is          18
+# number is           9
+# X is          23
+# number is          10
+# Y is          27
+# number of rx           9
+# Y is          21
+# number of rx           8
+# Y is          33
+# number of rx           7
+# Y is           1
+# number of rx           6
+# Y is          13
+# number of rx           5
+# Y is          19
+# number of rx           4
+# Y is           7
+# number of rx           3
+# Y is          19
+# number of rx           2
+# Y is          18
+# number of rx           1
+# Y is          23
+# number of rx           0
+#  quit -f
+# End time: 14:00:41 on Apr 16,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

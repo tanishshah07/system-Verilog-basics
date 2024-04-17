@@ -1,0 +1,43 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/Mailbox/connect inside new
+T_opt
+!s110 1713265296
+V5dUT=[P;BCHUY8]iBImhd2
+04 12 4 work diff_mailbox fast 0
+=1-c85b76258d3a-661e5a90-2ab-17d0
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+vdiff_mailbox
+DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1713265294
+!i10b 1
+!s100 8BXFfThkO0;A=Q9PgOW5D1
+I;llB6=LQogz?0>QbPeWz63
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 mbox_sv_unit
+S1
+R0
+w1713265291
+8mbox.sv
+Fmbox.sv
+L0 4
+OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1713265294.000000
+!s107 mbox.sv|
+!s90 mbox.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1

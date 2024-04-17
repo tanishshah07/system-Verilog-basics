@@ -1,4 +1,4 @@
-Start time: 16:11:59 on Mar 29,2024
+Start time: 17:08:43 on Apr 16,2024
 qverilog getter.sv 
 -- Compiling package getter_sv_unit
 -- Compiling module exp
@@ -25,9 +25,9 @@ Top level modules:
 # Loading work.getter_sv_unit(fast)
 # Loading work.exp(fast)
 # run -all
-# a:4,b:0,c:8
-# the properties are '{a:4, b:0, c:8}
+# a:0,b:0,c:8
+# the properties are '{a:0, b:0, c:8}
 # the address is 65538
 #  quit -f
-# End time: 16:12:02 on Mar 29,2024, Elapsed time: 0:00:03
+# End time: 17:08:47 on Apr 16,2024, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
