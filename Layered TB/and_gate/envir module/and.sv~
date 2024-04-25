@@ -1,0 +1,5 @@
+module and_d(and_intf dut_mp mp);
+
+assign mp.y=mp.a&mp.b;
+
+endmodule

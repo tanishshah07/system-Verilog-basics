@@ -1,11 +1,11 @@
-Start time: 17:44:32 on Apr 16,2024
+Start time: 10:48:33 on Apr 17,2024
 qverilog th_1.sv 
 -- Compiling module th_1
 
 Top level modules:
 	th_1
 # vsim -lib work work.th_1 -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
-# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
 # //
@@ -23,6 +23,7 @@ Top level modules:
 # Loading sv_std.std
 # Loading work.th_1(fast)
 # run -all
+# pass
 #  quit -f
-# End time: 17:44:37 on Apr 16,2024, Elapsed time: 0:00:05
+# End time: 10:48:36 on Apr 17,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0

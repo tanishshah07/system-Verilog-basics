@@ -1,4 +1,4 @@
-Start time: 14:41:10 on Apr 16,2024
+Start time: 14:06:39 on Apr 17,2024
 qverilog th_2.sv 
 -- Compiling module th_2
 
@@ -23,15 +23,15 @@ Top level modules:
 # Loading sv_std.std
 # Loading work.th_2(fast)
 # run -all
-#                    0Entering into the method           1
-#                    0Entering into the method           2
-#                    0Entering into the method           3
-#                    0Entering into the method           4
-#                   10Exiting from the method           1
-#                   10Exiting from the method           2
-#                   10Exiting from the method           3
-#                   10Exiting from the method           4
 # hello tanish
+#                    0Entering into the method           3
+#                    0Entering into the method           3
+#                    0Entering into the method           3
+#                    0Entering into the method           3
+#                   10Exiting from the method           3
+#                   10Exiting from the method           3
+#                   10Exiting from the method           3
+#                   10Exiting from the method           3
 #  quit -f
-# End time: 14:41:13 on Apr 16,2024, Elapsed time: 0:00:03
+# End time: 14:06:43 on Apr 17,2024, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0

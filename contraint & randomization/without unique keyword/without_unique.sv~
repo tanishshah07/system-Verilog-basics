@@ -1,0 +1,31 @@
+module without_unique();
+ class exp;
+   rand int arr[10];
+   constraint con1{
+       foreach(arr[i]){
+        foreach(arr[j]){
+          if(i!=j) arr[i]!=arr[j];
+	}
+       }
+   }
+
+   constraint con2{
+     foreach(arr[i]){
+       arr[i] inside {[1:15]};
+     }
+   }
+
+   function void dis();
+     $display("arr is %p",arr);
+   endfunction
+ endclass
+
+ exp e1;
+ initial begin
+   e1=new();
+   e1.randomize();
+   e1.dis();
+ end
+
+
+endmodule

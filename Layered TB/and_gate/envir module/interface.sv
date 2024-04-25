@@ -1,0 +1,7 @@
+interface and_intf();
+ logic a,b,y;
+
+ modport dut_mp(input a,b,output y);
+ modport tb_mp(output a,b,input y);
+ 
+endinterface

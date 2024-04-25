@@ -1,0 +1,43 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/SV_test_paper/q1
+T_opt
+!s110 1713503805
+VUQilVA0BGmf;<D<XifY[m2
+04 4 4 work que1 fast 0
+=1-c85b76258d3a-6621fe3d-1c9-12c4
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+vque1
+DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+!s110 1713503803
+!i10b 1
+!s100 Ydjjm0VCMgz1HPo56Eb^]1
+IANikY[@IkAnlWA1ATQVe90
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 q1_sv_unit
+S1
+R0
+w1713503799
+8q1.sv
+Fq1.sv
+L0 1
+OL;L;10.7c;67
+r1
+!s85 0
+31
+!s108 1713503803.000000
+!s107 q1.sv|
+!s90 q1.sv|
+!i113 0
+o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1

@@ -9,25 +9,25 @@ z2
 cModel Technology
 Z0 dE:/indicus_material/SV_at_indicus/threads/question 2
 T_opt
-!s110 1713258672
-V?_<LOMMID>]Pe>3?Jabez1
+!s110 1713343002
+V@NhBF<Y[?>JI^No2NRjf13
 04 4 4 work th_2 fast 0
-=1-c85b76258d3a-661e40b0-15f-3258
+=1-c85b76258d3a-661f8a1a-73-2c98
 o-quiet -auto_acc_if_foreign -work work
 Z1 tCvgOpt 0
 n@_opt
 OL;O;10.7c;67
 vth_2
 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-!s110 1713258670
+!s110 1713342999
 !i10b 1
-!s100 [[ndh6C]K6^oI_F4T06e31
-I=zoajJ9jX>CiAJTe]<GoA0
+!s100 IhGh^ed`]V:2mVLT]a:mW3
+IJ^R3;H4oVGl[GznXNDcAD0
 VDg1SIo80bB@j0V0VzS_@n1
 !s105 th_2_sv_unit
 S1
 R0
-w1713258668
+w1713342988
 8th_2.sv
 Fth_2.sv
 L0 1
@@ -35,7 +35,7 @@ OL;L;10.7c;67
 r1
 !s85 0
 31
-!s108 1713258670.000000
+!s108 1713342999.000000
 !s107 th_2.sv|
 !s90 th_2.sv|
 !i113 0

@@ -1,0 +1,78 @@
+`ifndef DRV_SV
+`define DRV_SV
+class mem_driv;
+mailbox #(mem_transx) gen2drv;
+mem_transx trans;
+virtual mem_intf vif;
+
+function new(mailbox #(mem_transx) gen2drv,virtual mem_intf vif);
+	this.gen2drv=gen2drv;
+	this.vif=vif;
+endfunction
+
+task run_phase();
+forever@(vif.clk) begin
+ //wait();
+ gen2drv.get(trans);
+
+ case(trans.fnx_e.name)
+	 "write": begin
+	   vif.wr_enb=1;
+	   vif.rd_enb=0;
+	   vif.wr_addr=trans.wr_addr;
+	   vif.wr_data=trans.wr_data;
+	 end
+         
+	 "read": begin
+	    vif.wr_enb=0;
+	    vif.rd_enb=1;
+	    vif.rd_addr=trans.rd_addr;
+	    vif.rd_data=trans.rd_data;
+	 end
+         
+	 default : begin
+	  vif.wr_enb=0;
+          vif.rd_enb=0;
+	 end
+ endcase
+
+/*
+ if(trans.fnx_e==1) begin
+	 //vif.rst=0;  call a task which is from top or test not directly
+	 //drive the reset from dirver
+	 vif.wr_enb=1;
+	 vif.rd_enb=0;
+	 vif.wr_addr=trans.wr_addr;
+	 vif.wr_data=trans.wr_data;
+ end
+
+ if(trans.fnx_e==2) begin
+	 //vif.rst=0;
+	 vif.wr_enb=0;
+	 vif.rd_enb=1;
+	 vif.rd_addr=trans.rd_addr;
+	 vif.rd_data=trans.rd_data;
+ end
+
+ if(trans.fnx_e==0) begin
+   //vif.rst=0;
+   vif.wr_enb=0;
+   vif.rd_enb=0;
+ end
+ //trans.flag=0;
+ */
+end
+// $display("in the driver");
+//trans.dis();
+//$display("wr_enb=%b",vif.wr_enb);
+//$display("rd_enb=%b",vif.rd_enb);
+//$display("wr_addr=%b",vif.wr_addr);
+//$display("rd_addr=%b",vif.rd_addr);
+//$display("wr_data=%b",vif.wr_data);
+//$display("rd_data=%b",vif.rd_data);
+//$display("rst=%b",vif.rst);
+endtask
+
+endclass
+
+`endif

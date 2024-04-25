@@ -1,0 +1,251 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/Layered TB/Memory
+T_opt
+!s110 1713897261
+VeOA=zmc^1mL`gDc1fC<nL0
+Z1 04 7 4 work mem_top fast 0
+=1-c85b76258d3a-6627ff2c-357-2abc
+Z2 o-quiet -auto_acc_if_foreign -work work
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1713897287
+V>Zk2kP0Lko8Zaz1HCcz192
+R1
+=1-c85b76258d3a-6627ff47-3a-12ec
+R2
+R3
+n@_opt1
+R4
+R0
+T_opt10
+!s110 1713934117
+VV7kzBj>35HM>DaGf;ROT02
+R1
+=1-c85b76258d3a-66288f25-175-2eac
+R2
+R3
+n@_opt10
+R4
+R0
+T_opt11
+!s110 1713934225
+V1QSK`;5TOc6;2@HKd@95^2
+R1
+=1-c85b76258d3a-66288f91-192-d88
+R2
+R3
+n@_opt11
+R4
+R0
+T_opt12
+!s110 1713934573
+VFi4g[nFNbW6f3FX^a43UH0
+R1
+=1-c85b76258d3a-662890ec-33f-29ac
+R2
+R3
+n@_opt12
+R4
+R0
+T_opt13
+!s110 1714015209
+V?mGRNYkhIJYH<<LR::L160
+R1
+=1-c85b76258d3a-6629cbe8-1d1-202c
+R2
+R3
+n@_opt13
+R4
+R0
+T_opt2
+!s110 1713897378
+VZFKaX=`7[<Dbl^D]@aaN>0
+R1
+=1-c85b76258d3a-6627ffa2-2a8-37c0
+R2
+R3
+n@_opt2
+R4
+R0
+T_opt3
+!s110 1713897544
+VCHAVFBDL`oWYMlBO9;i3P1
+R1
+=1-c85b76258d3a-66280048-1da-ac0
+R2
+R3
+n@_opt3
+R4
+R0
+T_opt4
+!s110 1713897697
+VfKn7E3b]6OcL>>l75hk@j0
+R1
+=1-c85b76258d3a-662800e1-ac-24dc
+R2
+R3
+n@_opt4
+R4
+R0
+T_opt5
+!s110 1713930066
+VzR3nS:cYRf8HHZjThj:zH1
+R1
+=1-c85b76258d3a-66287f52-184-edc
+R2
+R3
+n@_opt5
+R4
+R0
+T_opt6
+!s110 1713933495
+VfU5RBD?d@adn>`3cK?4HG2
+R1
+=1-c85b76258d3a-66288cb7-24b-1868
+R2
+R3
+n@_opt6
+R4
+R0
+T_opt7
+!s110 1713933750
+V^5_JBd<[k=k<n^8k4FaP20
+R1
+=1-c85b76258d3a-66288db6-5c-6c4
+R2
+R3
+n@_opt7
+R4
+R0
+T_opt8
+!s110 1713933813
+V;SHAV2X]FC0dCcID3eW?X3
+R1
+=1-c85b76258d3a-66288df5-247-26a0
+R2
+R3
+n@_opt8
+R4
+R0
+T_opt9
+!s110 1713933977
+Vd[LOZLKIAb=I9HUfQmJCk1
+R1
+=1-c85b76258d3a-66288e98-3b8-2e4c
+R2
+R3
+n@_opt9
+R4
+R0
+Ymem_intf
+Z5 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 49TcoW1WI>;UIn[XlT:GD1
+Ilgb0g3LJL1>J:de??>Y=^0
+Z7 !s105 mem_top_sv_unit
+S1
+R0
+w1714015663
+8mem_inter.sv
+Fmem_inter.sv
+L0 3
+Z8 OL;L;10.7c;67
+31
+Z9 !s108 1714019205.000000
+Z10 !s107 mem_test.sv|mem_env.sv|mem_scr.sv|mem_rfm.sv|mem_moni.sv|mem_driv.sv|mem_gen.sv|mem_trans.sv|mem_def.sv|mem_pkg.sv|mem_inter.sv|ram_16x8.sv|mem_top.sv|
+Z11 !s90 -reportprogress|300|mem_top.sv|
+!i113 0
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vmem_top
+R5
+DXx4 work 3 pkg 0 22 YCeoK?<om?ZacXj?8gO910
+R6
+r1
+!s85 0
+!i10b 1
+!s100 74186NfG;YUDHhGzcNGXH1
+I48fhO]0>IF0MYNY@P6fg93
+R7
+S1
+R0
+w1713959495
+8mem_top.sv
+Fmem_top.sv
+L0 8
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+Xpkg
+!s115 mem_intf
+R5
+VYCeoK?<om?ZacXj?8gO910
+r1
+!s85 0
+!i10b 1
+!s100 zS7iQb6OC?23Ec_9e:Gd31
+IYCeoK?<om?ZacXj?8gO910
+S1
+R0
+w1714019196
+Fmem_pkg.sv
+Fmem_def.sv
+Fmem_trans.sv
+Fmem_gen.sv
+Fmem_driv.sv
+Fmem_moni.sv
+Fmem_rfm.sv
+Fmem_scr.sv
+Fmem_env.sv
+Fmem_test.sv
+L0 5
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3
+vram
+R5
+R6
+r1
+!s85 0
+!i10b 1
+!s100 MD@SAP:W>[`bhY88G3:BB2
+INEh9EK4PSW082XcDDG1gi0
+R7
+S1
+R0
+w1713939347
+8ram_16x8.sv
+Fram_16x8.sv
+L0 8
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R3

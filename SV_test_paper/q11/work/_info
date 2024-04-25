@@ -1,0 +1,116 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/interface/hf
+T_opt
+!s110 1713424943
+V4Ag;GLZgNXK9li8]9oYzJ0
+04 3 4 work top fast 0
+=1-c85b76258d3a-6620ca2f-a0-630
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+R0
+vhf
+Z2 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z3 !s110 1713519790
+!i10b 1
+!s100 RoRJhZHXD<V>zmoCARJHD3
+IDWl8`mGHEOGa<<Jk;ol<K3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 !s105 top_sv_unit
+S1
+Z6 dE:/indicus_material/SV_at_indicus/SV_test_paper/q11
+w1713417654
+8hf.sv
+Fhf.sv
+L0 1
+Z7 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z8 !s108 1713519790.000000
+!s107 tb.sv|hf.sv|intf.sv|top.sv|
+Z9 !s90 top.sv|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Yhf_intf
+R2
+R3
+!i10b 1
+!s100 Kz@`2zQRP0Q5T9M`AXECL2
+IOZI5U[X=WEiWDK829L>X<3
+R4
+R5
+S1
+R6
+w1713426191
+8intf.sv
+Fintf.sv
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+Z11 !s107 tb.sv|hf.sv|intf.sv|top.sv|
+R9
+!i113 0
+R10
+R1
+vtb
+R2
+R3
+!i10b 1
+!s100 oNfFDBk:Z0?[]<Ilg5@MB0
+Ii8cmI2_B5J?_5Sk=l6EDF3
+R4
+R5
+S1
+R6
+w1713424984
+8tb.sv
+Ftb.sv
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+R11
+R9
+!i113 0
+R10
+R1
+vtop
+R2
+R3
+!i10b 1
+!s100 _CQR7cK0]X>]2B6RG6`iT2
+I1MhWDnz>MUnQ[TPDE;06T1
+R4
+R5
+S1
+R6
+w1713426176
+8top.sv
+Ftop.sv
+L0 4
+R7
+r1
+!s85 0
+31
+R8
+R11
+R9
+!i113 0
+R10
+R1

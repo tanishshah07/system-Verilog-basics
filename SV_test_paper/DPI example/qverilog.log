@@ -1,0 +1,14 @@
+Start time: 20:35:59 on Apr 19,2024
+qverilog dpi.c top.sv 
+-- Compiling module top
+
+Top level modules:
+	top
+(qverilog-7019) Can't locate a C/C++ compiler for 'DPI C/C++ File Compilation'.
+** Warning: (qverilog-144) Detected unknown compiler ''. Make sure that the CppPath INI file variable or the argument to the -cpppath option if set, is set to a path that exists
+-- Compiling DPI/PLI C file dpi.c
+** Error: (qverilog-70) Compilation of the C/C++ src files failed with the error messages given below.
+
+
+End time: 20:35:59 on Apr 19,2024, Elapsed time: 0:00:00
+Errors: 2, Warnings: 1

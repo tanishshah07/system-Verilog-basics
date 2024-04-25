@@ -1,0 +1,46 @@
+Start time: 15:11:14 on Apr 19,2024
+qverilog exp.sv 
+-- Compiling package exp_sv_unit
+-- Compiling module exp
+** Warning: exp.sv(36): (qverilog-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+** Warning: exp.sv(40): (qverilog-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+** Warning: exp.sv(47): (qverilog-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+** Warning: exp.sv(48): (qverilog-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+
+Top level modules:
+	exp
+# vsim -lib work work.exp_sv_unit work.exp -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: exp.sv(36): (vopt-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+# ** Warning: exp.sv(40): (vopt-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+# ** Warning: exp.sv(47): (vopt-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+# ** Warning: exp.sv(48): (vopt-2240) Treating stand-alone use of function 'dis' as an implicit VOID cast.
+# ** Warning: exp.sv(3): (vopt-2250) Function "dis" has no return value assignment.
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.exp_sv_unit(fast)
+# Loading work.exp(fast)
+# run -all
+# main a is           2
+# sub a is           3
+# main a is           5
+# sub a is          18
+# main a is           7
+# sub a is          17
+# sub a is           3
+#  quit -f
+# End time: 15:11:18 on Apr 19,2024, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 9

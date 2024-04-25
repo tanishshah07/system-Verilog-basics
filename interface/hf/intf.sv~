@@ -1,0 +1,9 @@
+interface hf_intf();
+ logic s,c;
+ logic a,b;
+ 
+
+
+  modport hf_mp(input a,b,output s,c);
+  modport tb_mp(output a,b,input s,c);
+endinterface

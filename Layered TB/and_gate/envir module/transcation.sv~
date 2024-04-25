@@ -1,0 +1,4 @@
+class and_transx;
+  rand bit a,b;
+  bit y;
+endclass
