@@ -11,7 +11,7 @@ function new(mailbox #(mem_transx) gen2drv,virtual mem_intf vif);
 endfunction
 
 task run_phase();
-forever@(vif.clk) begin
+forever begin
  //wait();
  gen2drv.get(trans);
 
@@ -29,12 +29,22 @@ forever@(vif.clk) begin
 	    vif.rd_addr=trans.rd_addr;
 	    vif.rd_data=trans.rd_data;
 	 end
-         
+
+         "simul" : begin
+	    vif.wr_enb=1;	 
+	    vif.rd_enb=1;
+	    vif.rd_addr=trans.rd_addr;
+	    vif.rd_data=trans.rd_data;
+            vif.wr_addr=trans.wr_addr;
+	    vif.wr_data=trans.wr_data;
+	 end
+
 	 default : begin
 	  vif.wr_enb=0;
           vif.rd_enb=0;
 	 end
  endcase
+ ->item;
 
 /*
  if(trans.fnx_e==1) begin

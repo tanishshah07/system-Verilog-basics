@@ -7,9 +7,9 @@
 `include "mem_pkg.sv"
 module mem_top();
 import pkg::*;
-bit clk;
+bit clk,rst;
 
-mem_intf intf(clk);
+mem_intf intf(clk,rst);
 mem_test test;
 
 ram dut(.clk(clk),
@@ -22,12 +22,12 @@ ram dut(.clk(clk),
 	.wr_data(intf.wr_data)
       );
 
-
 initial begin
  forever begin
   #5 clk=~clk;
  end
 end
+
 initial begin
  test=new(intf);
  //$display("tu top hai");
@@ -36,6 +36,20 @@ initial begin
  $finish;
 end
 
+/*
+initial begin
+ #23;
+ reset();
+ 
+end
+*/
+
+task reset();
+  rst=1'b1;
+  @(negedge clk);
+  rst=1'b0;
+
+endtask
 endmodule
 
 

@@ -17,11 +17,11 @@ forever begin
  mon2scr.get(trans);
  rfm2scr.get(trans_exp);
  #1;
- $display("inside scr");
- trans.dis();
+ //$display("inside scr");
+ trans.dis("scoreboard");
  if(trans.fnx_e!=0) begin
- if((trans.rd_data==trans_exp.rd_data) && trans.fnx==2) $display("scoreboard in read, passed");
- if((trans.wr_data==trans_exp.wr_data) && trans.fnx==1) $display(" scoreboard in write passed");
+ if((trans.rd_data==trans_exp.rd_data) && trans.fnx_e==2) $display("scoreboard in read, passed");
+ if((trans.wr_data==trans_exp.wr_data) && trans.fnx_e==1) $display(" scoreboard in write passed");
 
 end
 end

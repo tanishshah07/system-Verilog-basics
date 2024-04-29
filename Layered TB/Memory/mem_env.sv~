@@ -27,11 +27,11 @@ fork
  gen.run_phase();
  // $display("perfect skeleton till intenverionment ");
 
- //drv.run_phase();
- //mon.run_phase();
-// rfm.run_phase();
- //scr.run_phase();
-join_none
+ drv.run_phase();
+ mon.run_phase();
+ rfm.run_phase();
+ scr.run_phase();
+join
 endtask
 
 

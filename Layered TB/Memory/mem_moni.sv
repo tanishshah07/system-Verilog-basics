@@ -36,6 +36,12 @@ endfunction
 	    trans.rd_addr=vif.rd_addr;
 	    trans.rd_data=vif.rd_data;
 	   end
+	   "simul": begin
+	     trans.wr_addr=vif.wr_addr;
+	     trans.wr_data=vif.wr_data; 
+	     trans.rd_addr=vif.rd_addr;
+	     trans.rd_data=vif.rd_data;
+	   end
 
 	   default : begin
             trans.rd_addr=0;

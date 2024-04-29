@@ -9,9 +9,16 @@ rand bit [`ADDR_WID-1:0] rd_addr,wr_addr;
 rand bit [`DATA_WID-1:0] wr_data;
 bit [`DATA_WID-1:0] rd_data;
 
+constraint con1{
+  if(fnx_e==3) {
+    rd_addr!=wr_addr;
+  }
 
-task dis();
+}
+
+task dis(input string str);
  $display("#########################################################################");
+ $display("DISPLAY CALLED In %s",str);
  $display("NAME______________DATA___________________________________TIME");
  $display("Function          %0s                       %t",fnx_e.name,$time);
  $display("READ Adds         %0b                       %t",rd_addr,$time);

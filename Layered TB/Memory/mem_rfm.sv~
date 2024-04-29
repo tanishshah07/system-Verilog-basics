@@ -20,12 +20,12 @@ forever begin
   
   //#1;
  // $display("inside ref");
-  trans.dis();
-   if(trans.fnx==1) begin
+  trans.dis("RFM");
+   if(trans.fnx_e==1) begin
      ram_rf[trans.wr_addr]=trans.wr_data;
    end
 
-   if(trans.fnx==2) begin
+   if(trans.fnx_e==2) begin
       trans.rd_data=ram_rf[trans.rd_addr];
    end
   rfm2scr.put(trans);

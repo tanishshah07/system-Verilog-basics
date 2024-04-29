@@ -1,8 +1,10 @@
-Start time: 08:50:05 on Apr 25,2024
+Start time: 12:40:08 on Apr 25,2024
 qverilog mem_top.sv 
 -- Compiling module ram
 -- Compiling interface mem_intf
 -- Compiling package pkg
+** Warning: ** while parsing file included at mem_top.sv(7)
+** at mem_gen.sv(16): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
 -- Compiling module mem_top
 -- Importing package pkg
 
@@ -10,6 +12,7 @@ Top level modules:
 	mem_top
 # vsim -lib work work.mem_top -c -do "run -all; quit -f" -appendlog -l qverilog.log -vopt 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: mem_gen.sv(16): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
 # //
@@ -30,209 +33,42 @@ Top level modules:
 # Loading work.mem_top(fast)
 # run -all
 #########################################################################
+# DISPLAY CALLED In RFM
 # NAME______________DATA___________________________________TIME
-# Function          read                                          0
-# READ Adds         1100                                          0
-# WRITE Adds        1100                                          0
-# READ  DATA        0                                          0
-# WRITE  DATA       10010000                                          0
-#########################################################################
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          IDLE                                          0
-# READ Adds         110                                          0
-# WRITE Adds        110                                          0
-# READ  DATA        0                                          0
-# WRITE  DATA       1100100                                          0
-#########################################################################
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                          0
-# READ Adds         1                                          0
-# WRITE Adds        1110                                          0
-# READ  DATA        0                                          0
-# WRITE  DATA       110100                                          0
-#########################################################################
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          IDLE                                          5
-# READ Adds         0                                          5
-# WRITE Adds        0                                          5
-# READ  DATA        0                                          5
-# WRITE  DATA       0                                          5
-#########################################################################
-# inside scr
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          IDLE                                          6
-# READ Adds         0                                          6
-# WRITE Adds        0                                          6
+# Function          simul                                          6
+# READ Adds         1                                          6
+# WRITE Adds        1110                                          6
 # READ  DATA        0                                          6
-# WRITE  DATA       0                                          6
+# WRITE  DATA       110100                                          6
 #########################################################################
 #########################################################################
+# DISPLAY CALLED In scoreboard
 # NAME______________DATA___________________________________TIME
-# Function          read                                         15
-# READ Adds         1                                         15
-# WRITE Adds        0                                         15
-# READ  DATA        0                                         15
-# WRITE  DATA       0                                         15
+# Function          simul                                          6
+# READ Adds         1                                          6
+# WRITE Adds        1110                                          6
+# READ  DATA        0                                          6
+# WRITE  DATA       110100                                          6
 #########################################################################
-# inside scr
 #########################################################################
+# DISPLAY CALLED In RFM
 # NAME______________DATA___________________________________TIME
-# Function          read                                         16
+# Function          simul                                         16
 # READ Adds         1                                         16
-# WRITE Adds        0                                         16
+# WRITE Adds        1110                                         16
 # READ  DATA        0                                         16
-# WRITE  DATA       0                                         16
+# WRITE  DATA       110100                                         16
 #########################################################################
-# scoreboard in read, passed
 #########################################################################
+# DISPLAY CALLED In scoreboard
 # NAME______________DATA___________________________________TIME
-# Function          read                                         25
-# READ Adds         1                                         25
-# WRITE Adds        0                                         25
-# READ  DATA        0                                         25
-# WRITE  DATA       0                                         25
+# Function          simul                                         16
+# READ Adds         1                                         16
+# WRITE Adds        1110                                         16
+# READ  DATA        0                                         16
+# WRITE  DATA       110100                                         16
 #########################################################################
-# inside scr
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         26
-# READ Adds         1                                         26
-# WRITE Adds        0                                         26
-# READ  DATA        0                                         26
-# WRITE  DATA       0                                         26
-#########################################################################
-# scoreboard in read, passed
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         35
-# READ Adds         1                                         35
-# WRITE Adds        0                                         35
-# READ  DATA        0                                         35
-# WRITE  DATA       0                                         35
-#########################################################################
-# inside scr
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         36
-# READ Adds         1                                         36
-# WRITE Adds        0                                         36
-# READ  DATA        0                                         36
-# WRITE  DATA       0                                         36
-#########################################################################
-# scoreboard in read, passed
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         45
-# READ Adds         1                                         45
-# WRITE Adds        0                                         45
-# READ  DATA        0                                         45
-# WRITE  DATA       0                                         45
-#########################################################################
-# inside scr
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         46
-# READ Adds         1                                         46
-# WRITE Adds        0                                         46
-# READ  DATA        0                                         46
-# WRITE  DATA       0                                         46
-#########################################################################
-# scoreboard in read, passed
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         55
-# READ Adds         1                                         55
-# WRITE Adds        0                                         55
-# READ  DATA        0                                         55
-# WRITE  DATA       0                                         55
-#########################################################################
-# inside scr
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         56
-# READ Adds         1                                         56
-# WRITE Adds        0                                         56
-# READ  DATA        0                                         56
-# WRITE  DATA       0                                         56
-#########################################################################
-# scoreboard in read, passed
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         65
-# READ Adds         1                                         65
-# WRITE Adds        0                                         65
-# READ  DATA        0                                         65
-# WRITE  DATA       0                                         65
-#########################################################################
-# inside scr
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         66
-# READ Adds         1                                         66
-# WRITE Adds        0                                         66
-# READ  DATA        0                                         66
-# WRITE  DATA       0                                         66
-#########################################################################
-# scoreboard in read, passed
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         75
-# READ Adds         1                                         75
-# WRITE Adds        0                                         75
-# READ  DATA        0                                         75
-# WRITE  DATA       0                                         75
-#########################################################################
-# inside scr
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         76
-# READ Adds         1                                         76
-# WRITE Adds        0                                         76
-# READ  DATA        0                                         76
-# WRITE  DATA       0                                         76
-#########################################################################
-# scoreboard in read, passed
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         85
-# READ Adds         1                                         85
-# WRITE Adds        0                                         85
-# READ  DATA        0                                         85
-# WRITE  DATA       0                                         85
-#########################################################################
-# inside scr
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         86
-# READ Adds         1                                         86
-# WRITE Adds        0                                         86
-# READ  DATA        0                                         86
-# WRITE  DATA       0                                         86
-#########################################################################
-# scoreboard in read, passed
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         95
-# READ Adds         1                                         95
-# WRITE Adds        0                                         95
-# READ  DATA        0                                         95
-# WRITE  DATA       0                                         95
-#########################################################################
-# inside scr
-#########################################################################
-# NAME______________DATA___________________________________TIME
-# Function          read                                         96
-# READ Adds         1                                         96
-# WRITE Adds        0                                         96
-# READ  DATA        0                                         96
-# WRITE  DATA       0                                         96
-#########################################################################
-# scoreboard in read, passed
 # ** Note: $finish    : mem_top.sv(36)
-#    Time: 100 ns  Iteration: 0  Instance: /mem_top
-# End time: 08:50:11 on Apr 25,2024, Elapsed time: 0:00:06
-# Errors: 0, Warnings: 0
+#    Time: 20 ns  Iteration: 0  Instance: /mem_top
+# End time: 12:40:13 on Apr 25,2024, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 2

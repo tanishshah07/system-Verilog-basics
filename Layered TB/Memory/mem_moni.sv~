@@ -19,7 +19,7 @@ endfunction
    //$display("inside the run phase of the monitor");
   forever @(posedge vif.clk) begin
    //@)(vif.wr_enb); 
-    
+   #1; 
    trans=new();
    $cast(trans.fnx_e,{vif.rd_enb,vif.wr_enb});
     //$display("inside the forever block");

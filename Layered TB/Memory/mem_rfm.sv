@@ -20,7 +20,7 @@ forever begin
   
   //#1;
  // $display("inside ref");
-  trans.dis();
+  trans.dis("RFM");
    if(trans.fnx_e==1) begin
      ram_rf[trans.wr_addr]=trans.wr_data;
    end
@@ -28,6 +28,11 @@ forever begin
    if(trans.fnx_e==2) begin
       trans.rd_data=ram_rf[trans.rd_addr];
    end
+   if(trans.fnx_e==3) begin
+    ram_rf[trans.wr_addr]=trans.wr_data;
+    trans.rd_data=ram_rf[trans.rd_addr];
+   end
+
   rfm2scr.put(trans);
   end
 

@@ -3,7 +3,7 @@
 //`include "mem_def.sv"
 //`include "mem_inter.sv"
 package pkg;
-
+event item;
 `include "mem_def.sv"
 `include "mem_trans.sv"
 `include "mem_gen.sv"
