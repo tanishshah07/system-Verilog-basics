@@ -1,0 +1,170 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/Layered TB/Clocking block with memory/SIM
+T_opt
+!s110 1715163702
+VFDc_z@z^B@2ONL_dnVI1a2
+Z1 04 7 4 work mem_top fast 0
+=1-c85b76258d3a-663b5235-3bd-23e4
+Z2 o-quiet -auto_acc_if_foreign -work work -suppress 12110
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1715167201
+VU^B_;GZRD[AIaQ@`kYmGW1
+R1
+=1-c85b76258d3a-663b5fe1-308-2774
+R2
+R3
+n@_opt1
+R4
+Ymem_intf
+Z5 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z6 DXx4 work 15 mem_top_sv_unit 0 22 2i8>AW;14cz;LF?U2@g><1
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 @D@;k_H0S:D:=N;ld2?1c2
+IRzW7@OXJJn@HXTV6zCW7i0
+Z8 !s105 mem_top_sv_unit
+S1
+R0
+w1715150315
+8../ENV/mem_inter.sv
+Z9 F../ENV/mem_inter.sv
+L0 3
+Z10 OL;L;10.7c;67
+31
+Z11 !s108 1715167199.000000
+Z12 !s107 ../ENV/mem_inter.sv|../TEST/mem_test.sv|../ENV/mem_env.sv|../ENV/mem_scr.sv|../ENV/mem_rfm.sv|../ENV/mem_moni.sv|../ENV/mem_driv.sv|../TEST/mem_gen_sweep.sv|../TEST/mem_gen_simul.sv|../TEST/mem_gen_b2b.sv|../TEST/mem_gen_sanity.sv|../TEST/mem_gen_ibr.sv|../ENV/mem_gen.sv|../ENV/mem_trans.sv|../ENV/mem_def.sv|../TOP/mem_top.sv|../TEST/mem_pkg.sv|../RTL/ram_16x8.sv|
+Z13 !s90 ../RTL/ram_16x8.sv|../TEST/mem_pkg.sv|../TOP/mem_top.sv|+incdir+../ENV|+incdir+../TEST|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z15 !s92 +incdir+../ENV +incdir+../TEST -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vmem_top
+R5
+R6
+DXx4 work 3 pkg 0 22 ^Yo^]7LOfFkM`6KGF8R^83
+R7
+r1
+!s85 0
+!i10b 1
+!s100 WHm=V9FFC5<ziM_kkPcXY2
+IQY8]dKiDoPMVmCN_jd`NG3
+R8
+S1
+R0
+Z16 w1715163682
+Z17 8../TOP/mem_top.sv
+Z18 F../TOP/mem_top.sv
+L0 8
+R10
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R3
+Xmem_top_sv_unit
+R5
+V2i8>AW;14cz;LF?U2@g><1
+r1
+!s85 0
+!i10b 1
+!s100 >8XeH4XKnIZT[0C0lTZJK1
+I2i8>AW;14cz;LF?U2@g><1
+!i103 1
+S1
+R0
+R16
+R17
+R18
+Z19 F../ENV/mem_def.sv
+R9
+L0 3
+R10
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R3
+Xpkg
+!s115 mem_intf
+R5
+Z20 !s110 1715167199
+!i10b 1
+!s100 A?KD?GQBPS`VJ:=3S?RVK0
+I^Yo^]7LOfFkM`6KGF8R^83
+V^Yo^]7LOfFkM`6KGF8R^83
+S1
+R0
+w1715167193
+8../TEST/mem_pkg.sv
+F../TEST/mem_pkg.sv
+R19
+F../ENV/mem_trans.sv
+F../ENV/mem_gen.sv
+F../TEST/mem_gen_ibr.sv
+F../TEST/mem_gen_sanity.sv
+F../TEST/mem_gen_b2b.sv
+F../TEST/mem_gen_simul.sv
+F../TEST/mem_gen_sweep.sv
+F../ENV/mem_driv.sv
+F../ENV/mem_moni.sv
+F../ENV/mem_rfm.sv
+F../ENV/mem_scr.sv
+F../ENV/mem_env.sv
+F../TEST/mem_test.sv
+L0 16
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R3
+vram
+R5
+R20
+!i10b 1
+!s100 MD@SAP:W>[`bhY88G3:BB2
+IThb<E`D@hT:dEYk?AgD5G2
+R7
+!s105 ram_16x8_sv_unit
+S1
+R0
+w1713939347
+8../RTL/ram_16x8.sv
+F../RTL/ram_16x8.sv
+L0 8
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R3

@@ -1,0 +1,4 @@
+var g_data = {'dummy':{null},
+'/pkg/mem_scr':{h:'23',g:1,z:1},
+'work.pkg':{h:'7',z:1},
+'/pkg':{h:'12',z:1}};

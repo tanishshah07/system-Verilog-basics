@@ -1,0 +1,47 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
+</head>
+<body id="hdl2html">
+  <tt>
+<pre>
+<a name="1"><q-n>     1  </q-n></a>`ifndef INF_SV
+<a name="2"><q-n>     2  </q-n></a>`<q-a>define</q-w> INF_SV
+<a name="3"><q-n>     3  </q-n></a><q-w>interface</q-w> mem_intf(<q-w>input</q-w> <q-w>bit</q-w> clk,rst);
+<a name="4"><q-n>     4  </q-n></a><q-w>logic</q-w> wr_enb,rd_enb;
+<a name="5"><q-n>     5  </q-n></a><q-m>//logic [`ADDR_WID-1:0] rd_addr,wr_addr;</q-m>
+<a name="6"><q-n>     6  </q-n></a><q-m>//logic [`DATA_WID-1:0] rd_data,wr_data;</q-m>
+<a name="7"><q-n>     7  </q-n></a><q-w>logic</q-w> [3:0] rd_addr,wr_addr;
+<a name="8"><q-n>     8  </q-n></a><q-w>logic</q-w> [7:0] rd_data,wr_data;
+<a name="9"><q-n>     9  </q-n></a>
+<a name="10"><q-n>     10  </q-n></a><q-m>//logic rst=0; //for skeleton zero</q-m>
+<a name="11"><q-n>     11  </q-n></a>
+<a name="12"><q-n>     12  </q-n></a>
+<a name="13"><q-n>     13  </q-n></a>
+<a name="14"><q-n>     14  </q-n></a><q-w>clocking</q-w> drv_cb@(<q-a>posedge</q-w> clk);
+<a name="15"><q-n>     15  </q-n></a>  <q-w>default</q-w> <q-w>input</q-w> #0 <q-w>output</q-w> #1;
+<a name="16"><q-n>     16  </q-n></a>  <q-w>input</q-w> rst;
+<a name="17"><q-n>     17  </q-n></a>  <q-w>output</q-w> wr_enb,rd_enb;
+<a name="18"><q-n>     18  </q-n></a>  <q-w>output</q-w> rd_addr,wr_addr;
+<a name="19"><q-n>     19  </q-n></a>  <q-w>output</q-w> wr_data; 
+<a name="20"><q-n>     20  </q-n></a><q-w>endclocking</q-w>
+<a name="21"><q-n>     21  </q-n></a>
+<a name="22"><q-n>     22  </q-n></a><q-w>clocking</q-w> mon_cb@(<q-a>posedge</q-w> clk);
+<a name="23"><q-n>     23  </q-n></a>  <q-w>default</q-w> <q-w>input</q-w> #1 <q-w>output</q-w> #1;
+<a name="24"><q-n>     24  </q-n></a>  <q-w>input</q-w> wr_enb,rd_enb,rst;
+<a name="25"><q-n>     25  </q-n></a>  <q-w>input</q-w> rd_addr,wr_addr;
+<a name="26"><q-n>     26  </q-n></a>  <q-w>input</q-w> wr_data,rd_data; 
+<a name="27"><q-n>     27  </q-n></a><q-w>endclocking</q-w>
+<a name="28"><q-n>     28  </q-n></a>
+<a name="29"><q-n>     29  </q-n></a><q-m>//modport drv(clocking drv_cb);</q-m>
+<a name="30"><q-n>     30  </q-n></a><q-w>endinterface</q-w>
+<a name="31"><q-n>     31  </q-n></a>`<q-a>endif</q-w>
+</pre>
+</tt>
+
+  
+</body>
+</html>

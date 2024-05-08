@@ -1,0 +1,14 @@
+-html
+-htmldir
+E:/indicus_material/SV_at_indicus/Layered TB/Clocking block with memory/SIM
+-source
+-details
+-assert
+-directive
+-cvg
+-code
+bcefst
+-threshL
+50
+-threshH
+90

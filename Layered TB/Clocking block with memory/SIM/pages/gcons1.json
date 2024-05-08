@@ -1,0 +1,5 @@
+var g_db_data = [
+{dummy:0},
+{name:'data',f:1,type:6,id:151,tb:'7',h:'7',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#15',hdlPath:'/pkg/mem_scr',parent:'148'},
+{name:'data',f:1,type:6,id:273,tb:'7',h:'7',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#15',hdlPath:'work.pkg::mem_scr',parent:'270'}];
+processConsCovergroupsData(g_db_data);

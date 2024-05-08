@@ -1,0 +1,34 @@
+#Makefile
+vlib :
+	vlib work
+vlog :
+	vlog ../RTL/ram_16x8.sv ../TEST/mem_pkg.sv ../TOP/mem_top.sv +incdir+../ENV +incdir+../TEST
+vsimr :
+	vsim -novopt mem_top -suppress 12110 +SANITY -c -do "run -all;exit"
+
+vsim_IBR :
+	vsim -vopt -coverage mem_top -suppress 12110 +IBR -c -do "coverage save -onexit -directive -cvg -codeall test2.ucdb; run -all; exit"
+
+vsim_SANITY :
+	vsim -vopt -coverage mem_top -suppress 12110 +SANITY -c -do "coverage save -onexit -directive -cvg -codeall test1.ucdb; run -all; exit"
+
+vsim_SWWP :
+	vsim -vopt -coverage mem_top -suppress 12110 +SWWP -c -do "coverage save -onexit -directive -cvg -codeall test3.ucdb; run -all; exit"
+
+vsim_SIML :
+	vsim -vopt -coverage mem_top -suppress 12110 +SIMUL -c -do "coverage save -onexit -directive -cvg -codeall test4.ucdb; run -all; exit"
+
+vsim_B2B :
+	vsim -vopt -coverage mem_top -suppress 12110 +B2B -c -do "coverage save -onexit -directive -cvg -codeall test5.ucdb; run -all; exit"
+
+cover:
+	vcover merge ram.ucdb test1.ucdb test2.ucdb test3.ucdb test4.ucdb test5.ucdb
+delete:	 
+	del test1.ucbd test2.ucbd test3.ucbd test4.ucbd test5.ucbd
+	vcover report -details -html ram.ucdb -htmldir MEM
+
+
+
+run : vlib vlog vsim_IBR
+
+regress : vlib vlog vsim_SANITY vsim_IBR vsim_SWWP vsim_SIML vsim_B2B cover delete

@@ -1,0 +1,4 @@
+var g_db_data = [
+{dummy:0},
+{name:'cvg',f:1,type:6,id:24,tb:'57',h:'54',m:'3',hp:'94.73%',cov:['98.82%','G'],g:'100.00%',gp:['98.82%','G'],hdlPath:'/pkg/mem_scr',parent:'23'}];
+processConsCovergroupsData(g_db_data);

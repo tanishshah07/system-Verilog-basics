@@ -1,0 +1,26 @@
+var g_data = {
+g148:[{dummy:0},
+{name:'data',f:1,type:1,id:151,tb:'7',h:'7',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#15',parent:'148'},
+{name:'\\/pkg::mem_scr::data ',f:1,type:2,id:155,tb:'7',h:'7',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#15',cvg:'data',parent:'151'}],
+c151:{name:'data',type:1,pHash:'148',pPath:'/pkg/mem_scr',totals:[7,7,'100.00%','G',0,0,'0.00%','R'],cvp:[{dummy:0},
+{name:'RD_ADRR',f:1,type:4,id:152,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#16',parent:'151'},
+{name:'WR_ADRR',f:1,type:4,id:153,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#21',parent:'151'},
+{name:'RD_DATA0',f:1,type:4,id:154,tb:'1',h:'1',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#26',parent:'151'}],crx:[{dummy:0}]},
+c155:{name:'\\/pkg::mem_scr::data ',type:2,pHash:'148',pPath:'/pkg/mem_scr',totals:[7,7,'100.00%','G',0,0,'0.00%','R'],cvp:[{dummy:0},
+{name:'RD_ADRR',f:1,type:4,id:156,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hasb:1,lnk:'__HDL_srcfile_14.htm#16',parent:'155'},
+{name:'WR_ADRR',f:1,type:4,id:157,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hasb:1,lnk:'__HDL_srcfile_14.htm#21',parent:'155'},
+{name:'RD_DATA0',f:1,type:4,id:158,tb:'1',h:'1',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hasb:1,lnk:'__HDL_srcfile_14.htm#26',parent:'155'}],crx:[{dummy:0}]},
+g270:[{dummy:0},
+{name:'data',f:1,type:1,id:273,tb:'7',h:'7',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#15',parent:'270'},
+{name:'\\/pkg::mem_scr::data ',f:1,type:2,id:277,tb:'7',h:'7',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#15',cvg:'data',parent:'273'}],
+c273:{name:'data',type:1,pHash:'270',pPath:'work.pkg::mem_scr',totals:[7,7,'100.00%','G',0,0,'0.00%','R'],cvp:[{dummy:0},
+{name:'RD_ADRR',f:1,type:4,id:274,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#16',parent:'273'},
+{name:'WR_ADRR',f:1,type:4,id:275,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#21',parent:'273'},
+{name:'RD_DATA0',f:1,type:4,id:276,tb:'1',h:'1',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],lnk:'__HDL_srcfile_14.htm#26',parent:'273'}],crx:[{dummy:0}]},
+c277:{name:'\\/pkg::mem_scr::data ',type:2,pHash:'270',pPath:'work.pkg::mem_scr',totals:[7,7,'100.00%','G',0,0,'0.00%','R'],cvp:[{dummy:0},
+{name:'RD_ADRR',f:1,type:4,id:278,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hasb:1,lnk:'__HDL_srcfile_14.htm#16',parent:'277'},
+{name:'WR_ADRR',f:1,type:4,id:279,tb:'3',h:'3',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hasb:1,lnk:'__HDL_srcfile_14.htm#21',parent:'277'},
+{name:'RD_DATA0',f:1,type:4,id:280,tb:'1',h:'1',m:'0',hp:'100.00%',cov:['100.00%','G'],g:'100.00%',gp:['100.00%','G'],hasb:1,lnk:'__HDL_srcfile_14.htm#26',parent:'277'}],crx:[{dummy:0}]},
+dummyEnd:0
+};
+processCovergroupsData(g_data);

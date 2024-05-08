@@ -1,0 +1,171 @@
+
+////////////////////////////////////////////////
+//
+//Company_Name : Scaledge
+//Author_Name  : TANISH_SHAH
+//File_Name    : mem_driv.sv
+//File_Path    : 
+//Class_Name   : mem_driv               
+//Project_Name : Dual_Port_Ram
+//Description  : 
+//
+/////////////////////////////////////////////////
+
+`ifndef DRV_SV
+`define DRV_SV
+class mem_driv;
+mailbox #(mem_transx) gen2drv;
+mem_transx trans;
+virtual mem_intf vif;
+
+function void connect(mailbox #(mem_transx) gen2drv,virtual mem_intf vif);
+        this.gen2drv=gen2drv;
+	this.vif=vif;
+endfunction
+
+
+task run_phase();
+forever begin
+
+ fork
+   begin:rst_b
+    wait(vif.drv_cb.rst==1);
+    disable drv_b;
+    vif.drv_cb.wr_enb<=0;	 
+    vif.drv_cb.rd_enb<=0;
+    vif.drv_cb.rd_addr<='d0;
+    vif.drv_cb.wr_addr<='d0;
+    vif.drv_cb.wr_data<='d0;
+    @(negedge vif.clk);
+   end
+   begin:drv_b
+     @(vif.drv_cb);
+
+ //$display("inside side else of if %b @ %t",vif.drv_cb.rst,$time);
+    gen2drv.get(trans);
+    case(trans.fnx_e.name)
+	 "write": begin
+	   vif.drv_cb.wr_enb<=1;
+	   vif.drv_cb.rd_enb<=0;
+	   vif.drv_cb.wr_addr<=trans.wr_addr;
+	   vif.drv_cb.wr_data<=trans.wr_data;
+	 end
+         
+	 "read": begin
+	    vif.drv_cb.wr_enb<=0;
+	    vif.drv_cb.rd_enb<=1;
+	    vif.drv_cb.rd_addr<=trans.rd_addr;
+	    //vif.drv_cb.rd_data<=trans.rd_data;
+	 end
+
+         "simul" : begin
+	    vif.drv_cb.wr_enb<=1;	 
+	    vif.drv_cb.rd_enb<=1;
+	    vif.drv_cb.rd_addr<=trans.rd_addr;
+	    //vif.drv_cb.rd_data<=trans.rd_data;
+            vif.drv_cb.wr_addr<=trans.wr_addr;
+	    vif.drv_cb.wr_data<=trans.wr_data;
+	 end
+
+	 default : begin
+	  vif.drv_cb.wr_enb<=0;
+          vif.drv_cb.rd_enb<=0;
+	 end
+   endcase
+   disable rst_b;
+   end
+ join
+ //disable fork;
+
+ /*
+ //wait();
+ //$display("upper side of if %b @%t",vif.drv_cb.rst,$time);
+ if(vif.drv_cb.rst==1) begin
+ //$display("inside side of if %b @%t",vif.drv_cb.rst,$time);
+   //$cast(trans.fnx_e,4);
+   vif.drv_cb.wr_enb<=0;	 
+   vif.drv_cb.rd_enb<=0;
+   vif.drv_cb.rd_addr<='d0;
+   vif.drv_cb.wr_addr<='d0;
+   vif.drv_cb.wr_data<='d0;
+   @(negedge vif.clk);
+ end
+ else begin
+ @(vif.drv_cb);
+ //$display("inside side else of if %b @ %t",vif.drv_cb.rst,$time);
+ gen2drv.get(trans);
+ case(trans.fnx_e.name)
+	 "write": begin
+	   vif.drv_cb.wr_enb<=1;
+	   vif.drv_cb.rd_enb<=0;
+	   vif.drv_cb.wr_addr<=trans.wr_addr;
+	   vif.drv_cb.wr_data<=trans.wr_data;
+	 end
+         
+	 "read": begin
+	    vif.drv_cb.wr_enb<=0;
+	    vif.drv_cb.rd_enb<=1;
+	    vif.drv_cb.rd_addr<=trans.rd_addr;
+	    //vif.drv_cb.rd_data<=trans.rd_data;
+	 end
+
+         "simul" : begin
+	    vif.drv_cb.wr_enb<=1;	 
+	    vif.drv_cb.rd_enb<=1;
+	    vif.drv_cb.rd_addr<=trans.rd_addr;
+	    //vif.drv_cb.rd_data<=trans.rd_data;
+            vif.drv_cb.wr_addr<=trans.wr_addr;
+	    vif.drv_cb.wr_data<=trans.wr_data;
+	 end
+
+	 default : begin
+	  vif.drv_cb.wr_enb<=0;
+          vif.drv_cb.rd_enb<=0;
+	 end
+ endcase
+
+end
+*/
+ //#1; // FIX MEEE for testing only
+//trans.dis("driver");
+/*
+ if(trans.fnx_e==1) begin
+	 //vif.rst=0;  call a task which is from top or test not directly
+	 //drive the reset from dirver
+	 vif.wr_enb=1;
+	 vif.rd_enb=0;
+	 vif.wr_addr=trans.wr_addr;
+	 vif.wr_data=trans.wr_data;
+ end
+
+ if(trans.fnx_e==2) begin
+	 //vif.rst=0;
+	 vif.wr_enb=0;
+	 vif.rd_enb=1;
+	 vif.rd_addr=trans.rd_addr;
+	 vif.rd_data=trans.rd_data;
+ end
+
+ if(trans.fnx_e==0) begin
+   //vif.rst=0;
+   vif.wr_enb=0;
+   vif.rd_enb=0;
+ end
+ //trans.flag=0;
+ */
+->item_done;
+end
+// $display("in the driver");
+//trans.dis();
+//$display("wr_enb=%b",vif.wr_enb);
+//$display("rd_enb=%b",vif.rd_enb);
+//$display("wr_addr=%b",vif.wr_addr);
+//$display("rd_addr=%b",vif.rd_addr);
+//$display("wr_data=%b",vif.wr_data);
+//$display("rd_data=%b",vif.rd_data);
+//$display("rst=%b",vif.rst);
+endtask
+
+endclass
+
+`endif

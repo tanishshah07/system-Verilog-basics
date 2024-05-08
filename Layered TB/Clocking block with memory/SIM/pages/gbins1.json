@@ -1,0 +1,10 @@
+var g_data = {
+c156:[4,'RD_ADRR',[],,'155',2,1,'\\/pkg::mem_scr::data ','148','/pkg/mem_scr',[[],[0,'1','5',,'LOW_ADDR'],[0,'1','5',,'MED_ADDR'],[0,'1','5',,'HIGH_ADDR']],[]],
+c157:[4,'WR_ADRR',[],,'155',2,1,'\\/pkg::mem_scr::data ','148','/pkg/mem_scr',[[],[0,'1','5',,'LOW_ADDR'],[0,'1','5',,'MED_ADDR'],[0,'1','5',,'HIGH_ADDR']],[]],
+c158:[4,'RD_DATA0',[],,'155',2,1,'\\/pkg::mem_scr::data ','148','/pkg/mem_scr',[[],[0,'1','1',,'TRAN[1=>0=>1]']],[]],
+c278:[4,'RD_ADRR',[],,'277',2,1,'\\/pkg::mem_scr::data ','270','work.pkg::mem_scr',[[],[0,'1','5',,'LOW_ADDR'],[0,'1','5',,'MED_ADDR'],[0,'1','5',,'HIGH_ADDR']],[]],
+c279:[4,'WR_ADRR',[],,'277',2,1,'\\/pkg::mem_scr::data ','270','work.pkg::mem_scr',[[],[0,'1','5',,'LOW_ADDR'],[0,'1','5',,'MED_ADDR'],[0,'1','5',,'HIGH_ADDR']],[]],
+c280:[4,'RD_DATA0',[],,'277',2,1,'\\/pkg::mem_scr::data ','270','work.pkg::mem_scr',[[],[0,'1','1',,'TRAN[1=>0=>1]']],[]],
+dummyEnd:0
+};
+processCovergroupsData(g_data);

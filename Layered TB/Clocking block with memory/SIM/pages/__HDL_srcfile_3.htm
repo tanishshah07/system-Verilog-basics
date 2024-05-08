@@ -1,0 +1,70 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
+</head>
+<body id="hdl2html">
+  <tt>
+<pre>
+<a name="1"><q-n>     1  </q-n></a>`ifndef DUT_SV
+<a name="2"><q-n>     2  </q-n></a>`<q-a>define</q-w> DUT_SV
+<a name="3"><q-n>     3  </q-n></a>
+<a name="4"><q-n>     4  </q-n></a><q-m>//RAM 16x8</q-m>
+<a name="5"><q-n>     5  </q-n></a>`<q-a>define</q-w> ADDR_WIDTH 4
+<a name="6"><q-n>     6  </q-n></a>`<q-a>define</q-w> DEPTH 16
+<a name="7"><q-n>     7  </q-n></a>`<q-a>define</q-w> DATA_WIDTH 8 
+<a name="8"><q-n>     8  </q-n></a><q-w>module</q-w> ram (clk,
+<a name="9"><q-n>     9  </q-n></a>            rst,
+<a name="10"><q-n>     10  </q-n></a>            wr_enb,
+<a name="11"><q-n>     11  </q-n></a>            wr_addr,
+<a name="12"><q-n>     12  </q-n></a>            wr_data,
+<a name="13"><q-n>     13  </q-n></a>            rd_enb,
+<a name="14"><q-n>     14  </q-n></a>            rd_addr,
+<a name="15"><q-n>     15  </q-n></a>            rd_data);
+<a name="16"><q-n>     16  </q-n></a>
+<a name="17"><q-n>     17  </q-n></a><q-m>//port direction</q-m>
+<a name="18"><q-n>     18  </q-n></a>  <q-w>input</q-w> clk, rst;
+<a name="19"><q-n>     19  </q-n></a>
+<a name="20"><q-n>     20  </q-n></a> <q-m>//write signals</q-m>
+<a name="21"><q-n>     21  </q-n></a>  <q-w>input</q-w>                   wr_enb;
+<a name="22"><q-n>     22  </q-n></a>  <q-w>input</q-w> [`ADDR_WIDTH-1:0] wr_addr;
+<a name="23"><q-n>     23  </q-n></a>  <q-w>input</q-w> [`DATA_WIDTH-1:0] wr_data;
+<a name="24"><q-n>     24  </q-n></a>
+<a name="25"><q-n>     25  </q-n></a> <q-m>//read signals</q-m>
+<a name="26"><q-n>     26  </q-n></a>  <q-w>input</q-w>                        rd_enb;
+<a name="27"><q-n>     27  </q-n></a>  <q-w>input</q-w>      [`ADDR_WIDTH-1:0] rd_addr;
+<a name="28"><q-n>     28  </q-n></a>  <q-w>output</q-w> <q-w>reg</q-w> [`DATA_WIDTH-1:0] rd_data;
+<a name="29"><q-n>     29  </q-n></a>
+<a name="30"><q-n>     30  </q-n></a>
+<a name="31"><q-n>     31  </q-n></a> <q-m>//internal memory</q-m>
+<a name="32"><q-n>     32  </q-n></a> <q-w>bit</q-w> [`DATA_WIDTH-1:0] ram [0:`DEPTH-1];
+<a name="33"><q-n>     33  </q-n></a>
+<a name="34"><q-n>     34  </q-n></a> <q-w>reg</q-w> [`ADDR_WIDTH:0] i;
+<a name="35"><q-n>     35  </q-n></a>
+<a name="36"><q-n>     36  </q-n></a> <q-m>//implementation</q-m>
+<a name="37"><q-n>     37  </q-n></a> <q-w>always</q-w>@(<q-a>posedge</q-w> clk)
+<a name="38"><q-n>     38  </q-n></a>  <q-w>if</q-w> (rst) <q-w>begin</q-w>
+<a name="39"><q-n>     39  </q-n></a>     rd_data &lt;= `DATA_WIDTH'd0;
+<a name="40"><q-n>     40  </q-n></a>	 <q-m>//memory initialisation</q-m>
+<a name="41"><q-n>     41  </q-n></a>     <q-w>for</q-w> (i=0;i&lt;`DEPTH;i=i+1) 
+<a name="42"><q-n>     42  </q-n></a>         ram[i] &lt;= `DATA_WIDTH'd0;
+<a name="43"><q-n>     43  </q-n></a>  <q-w>end</q-w>
+<a name="44"><q-n>     44  </q-n></a>  <q-w>else</q-w> <q-w>begin</q-w>
+<a name="45"><q-n>     45  </q-n></a>    <q-m>//write logic</q-m>
+<a name="46"><q-n>     46  </q-n></a>     <q-w>if</q-w> (wr_enb)
+<a name="47"><q-n>     47  </q-n></a>        ram[wr_addr] &lt;= wr_data;
+<a name="48"><q-n>     48  </q-n></a>    <q-m>//read logic</q-m>
+<a name="49"><q-n>     49  </q-n></a>     <q-w>if</q-w> (rd_enb)
+<a name="50"><q-n>     50  </q-n></a>        rd_data &lt;= ram[rd_addr];
+<a name="51"><q-n>     51  </q-n></a>  <q-w>end</q-w>
+<a name="52"><q-n>     52  </q-n></a>
+<a name="53"><q-n>     53  </q-n></a><q-w>endmodule</q-w>
+<a name="54"><q-n>     54  </q-n></a>`<q-a>endif</q-w>
+</pre>
+</tt>
+
+  
+</body>
+</html>

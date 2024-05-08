@@ -1,0 +1,131 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Questa Coverage Report</title>
+  <link rel="StyleSheet" media="screen" href="../css/hdl2html.css"/>
+</head>
+<body id="hdl2html">
+  <tt>
+<pre>
+<a name="1"><q-n>     1  </q-n></a>
+<a name="2"><q-n>     2  </q-n></a><q-m>////////////////////////////////////////////////</q-m>
+<a name="3"><q-n>     3  </q-n></a><q-m>//</q-m>
+<a name="4"><q-n>     4  </q-n></a><q-m>//Company_Name : Scaledge</q-m>
+<a name="5"><q-n>     5  </q-n></a><q-m>//Author_Name  : TANISH_SHAH</q-m>
+<a name="6"><q-n>     6  </q-n></a><q-m>//File_Name    : mem_moni.sv</q-m>
+<a name="7"><q-n>     7  </q-n></a><q-m>//File_Path    : </q-m>
+<a name="8"><q-n>     8  </q-n></a><q-m>//Class_Name   : mem_moni               </q-m>
+<a name="9"><q-n>     9  </q-n></a><q-m>//Project_Name : Dual_Port_Ram</q-m>
+<a name="10"><q-n>     10  </q-n></a><q-m>//Description  : </q-m>
+<a name="11"><q-n>     11  </q-n></a><q-m>//</q-m>
+<a name="12"><q-n>     12  </q-n></a><q-m>/////////////////////////////////////////////////</q-m>
+<a name="13"><q-n>     13  </q-n></a>
+<a name="14"><q-n>     14  </q-n></a>`ifndef MON_SV
+<a name="15"><q-n>     15  </q-n></a>`<q-a>define</q-w> MON_SV
+<a name="16"><q-n>     16  </q-n></a> <q-w>class</q-w> mem_moni;
+<a name="17"><q-n>     17  </q-n></a> mem_transx trans;
+<a name="18"><q-n>     18  </q-n></a>
+<a name="19"><q-n>     19  </q-n></a> <q-w>virtual</q-w> mem_intf vif;
+<a name="20"><q-n>     20  </q-n></a><q-m>//int x;</q-m>
+<a name="21"><q-n>     21  </q-n></a> mailbox #(mem_transx) mon2rfm;
+<a name="22"><q-n>     22  </q-n></a> mailbox #(mem_transx) mon2scr;
+<a name="23"><q-n>     23  </q-n></a>
+<a name="24"><q-n>     24  </q-n></a> <q-w>function</q-w> <q-w>void</q-w> connect(mailbox #(mem_transx) mon2rfm,mon2scr,<q-w>virtual</q-w> mem_intf vif);
+<a name="25"><q-n>     25  </q-n></a>	<q-w>this</q-w>.mon2rfm=mon2rfm;
+<a name="26"><q-n>     26  </q-n></a>	<q-w>this</q-w>.mon2scr=mon2scr;
+<a name="27"><q-n>     27  </q-n></a>	<q-w>this</q-w>.vif=vif;
+<a name="28"><q-n>     28  </q-n></a>
+<a name="29"><q-n>     29  </q-n></a><q-w>endfunction</q-w>
+<a name="30"><q-n>     30  </q-n></a>
+<a name="31"><q-n>     31  </q-n></a> <q-w>task</q-w> run_phase();
+<a name="32"><q-n>     32  </q-n></a>   <q-m>//$display("inside the run phase of the monitor");</q-m>
+<a name="33"><q-n>     33  </q-n></a>  <q-w>forever</q-w> @(vif.mon_cb) <q-w>begin</q-w>
+<a name="34"><q-n>     34  </q-n></a>   <q-m>//@)(vif.wr_enb); </q-m>
+<a name="35"><q-n>     35  </q-n></a>   <q-m>//#1;// </q-m>
+<a name="36"><q-n>     36  </q-n></a>   trans=<q-w>new</q-w>();
+<a name="37"><q-n>     37  </q-n></a>   <q-w>if</q-w> (vif.mon_cb.rst) <q-w>begin</q-w>
+<a name="38"><q-n>     38  </q-n></a>	   $<q-v>cast</q-w>(trans.fnx_e,4);
+<a name="39"><q-n>     39  </q-n></a>   <q-w>end</q-w>
+<a name="40"><q-n>     40  </q-n></a>  <q-w>else</q-w> $<q-v>cast</q-w>(trans.fnx_e,{vif.rd_enb,vif.wr_enb});
+<a name="41"><q-n>     41  </q-n></a>    <q-m>//$display("inside the forever block");</q-m>
+<a name="42"><q-n>     42  </q-n></a>   <q-m>//#12;</q-m>
+<a name="43"><q-n>     43  </q-n></a>   <q-w>case</q-w>(trans.fnx_e.name)
+<a name="44"><q-n>     44  </q-n></a>	   <q-l>"write"</q-l>: <q-w>begin</q-w>
+<a name="45"><q-n>     45  </q-n></a>	    trans.wr_addr=vif.mon_cb.wr_addr;
+<a name="46"><q-n>     46  </q-n></a>	    trans.wr_data=vif.mon_cb.wr_data;   
+<a name="47"><q-n>     47  </q-n></a>	   <q-w>end</q-w>
+<a name="48"><q-n>     48  </q-n></a>
+<a name="49"><q-n>     49  </q-n></a>	   <q-l>"read"</q-l> : <q-w>begin</q-w>
+<a name="50"><q-n>     50  </q-n></a>	    trans.rd_addr=vif.mon_cb.rd_addr;
+<a name="51"><q-n>     51  </q-n></a>	    trans.rd_data=vif.mon_cb.rd_data;
+<a name="52"><q-n>     52  </q-n></a>	   <q-w>end</q-w>
+<a name="53"><q-n>     53  </q-n></a>	   <q-l>"simul"</q-l>: <q-w>begin</q-w>
+<a name="54"><q-n>     54  </q-n></a>	     trans.wr_addr=vif.mon_cb.wr_addr;
+<a name="55"><q-n>     55  </q-n></a>	     trans.wr_data=vif.mon_cb.wr_data; 
+<a name="56"><q-n>     56  </q-n></a>	     trans.rd_addr=vif.mon_cb.rd_addr;
+<a name="57"><q-n>     57  </q-n></a>	     trans.rd_data=vif.mon_cb.rd_data;
+<a name="58"><q-n>     58  </q-n></a>	   <q-w>end</q-w>
+<a name="59"><q-n>     59  </q-n></a>
+<a name="60"><q-n>     60  </q-n></a>	   <q-w>default</q-w> : <q-w>begin</q-w>
+<a name="61"><q-n>     61  </q-n></a>            trans.rd_addr=0;
+<a name="62"><q-n>     62  </q-n></a>	    trans.rd_data=0;
+<a name="63"><q-n>     63  </q-n></a>
+<a name="64"><q-n>     64  </q-n></a>	     	<q-m>//$cast(trans.fnx_e,0);</q-m>
+<a name="65"><q-n>     65  </q-n></a>	   <q-w>end</q-w>
+<a name="66"><q-n>     66  </q-n></a>   <q-w>endcase</q-w>
+<a name="67"><q-n>     67  </q-n></a>    mon2rfm.put(trans);
+<a name="68"><q-n>     68  </q-n></a>    mon2scr.put(trans);
+<a name="69"><q-n>     69  </q-n></a>    <q-m>//trans.dis("monitor");</q-m>
+<a name="70"><q-n>     70  </q-n></a>
+<a name="71"><q-n>     71  </q-n></a>  
+<a name="72"><q-n>     72  </q-n></a>
+<a name="73"><q-n>     73  </q-n></a>
+<a name="74"><q-n>     74  </q-n></a><q-m>/*</q-m>
+<a name="75"><q-n>     75  </q-n></a><q-m>   if(vif.wr_enb==1 &amp;&amp; vif.rd_enb==0) begin</q-m>
+<a name="76"><q-n>     76  </q-n></a><q-m>	 //$display("inside the if staatement");</q-m>
+<a name="77"><q-n>     77  </q-n></a><q-m>        trans.wr_addr=vif.wr_addr;</q-m>
+<a name="78"><q-n>     78  </q-n></a><q-m>	trans.wr_data=vif.wr_data;</q-m>
+<a name="79"><q-n>     79  </q-n></a><q-m>	//trans.fnx=funct'(1);</q-m>
+<a name="80"><q-n>     80  </q-n></a><q-m>        $cast(trans.fnx,1);</q-m>
+<a name="81"><q-n>     81  </q-n></a><q-m>        mon2rfm.put(trans);</q-m>
+<a name="82"><q-n>     82  </q-n></a><q-m>        mon2scr.put(trans);</q-m>
+<a name="83"><q-n>     83  </q-n></a><q-m>        //$display("all line of if executes");</q-m>
+<a name="84"><q-n>     84  </q-n></a><q-m>	//$display("inside monitor");</q-m>
+<a name="85"><q-n>     85  </q-n></a><q-m>	//trans.dis();</q-m>
+<a name="86"><q-n>     86  </q-n></a><q-m>	//break;</q-m>
+<a name="87"><q-n>     87  </q-n></a><q-m>    end</q-m>
+<a name="88"><q-n>     88  </q-n></a><q-m>    if(vif.wr_enb==0 &amp;&amp; vif.rd_enb==1) begin</q-m>
+<a name="89"><q-n>     89  </q-n></a><q-m>	 $cast(trans.fnx,2);</q-m>
+<a name="90"><q-n>     90  </q-n></a><q-m>	trans.rd_addr=vif.rd_addr;</q-m>
+<a name="91"><q-n>     91  </q-n></a><q-m>	trans.rd_data=vif.rd_data;</q-m>
+<a name="92"><q-n>     92  </q-n></a><q-m>        mon2rfm.put(trans);</q-m>
+<a name="93"><q-n>     93  </q-n></a><q-m>        mon2scr.put(trans);</q-m>
+<a name="94"><q-n>     94  </q-n></a><q-m></q-m>
+<a name="95"><q-n>     95  </q-n></a><q-m>	//break;</q-m>
+<a name="96"><q-n>     96  </q-n></a><q-m>    end</q-m>
+<a name="97"><q-n>     97  </q-n></a><q-m>if(vif.wr_enb==0 &amp;&amp; vif.rd_enb==0) begin</q-m>
+<a name="98"><q-n>     98  </q-n></a><q-m>       	$cast(trans.fnx,0);</q-m>
+<a name="99"><q-n>     99  </q-n></a><q-m>        mon2rfm.put(trans);</q-m>
+<a name="100"><q-n>     100  </q-n></a><q-m>        mon2scr.put(trans);</q-m>
+<a name="101"><q-n>     101  </q-n></a><q-m></q-m>
+<a name="102"><q-n>     102  </q-n></a><q-m>	//break;</q-m>
+<a name="103"><q-n>     103  </q-n></a><q-m> end</q-m>
+<a name="104"><q-n>     104  </q-n></a><q-m>*/</q-m>
+<a name="105"><q-n>     105  </q-n></a>
+<a name="106"><q-n>     106  </q-n></a>
+<a name="107"><q-n>     107  </q-n></a><q-w>end</q-w>
+<a name="108"><q-n>     108  </q-n></a>$display(<q-l>"outside loop"</q-l>);
+<a name="109"><q-n>     109  </q-n></a><q-w>endtask</q-w>
+<a name="110"><q-n>     110  </q-n></a>
+<a name="111"><q-n>     111  </q-n></a><q-w>endclass</q-w>
+<a name="112"><q-n>     112  </q-n></a>
+<a name="113"><q-n>     113  </q-n></a>
+<a name="114"><q-n>     114  </q-n></a>
+<a name="115"><q-n>     115  </q-n></a>`<q-a>endif</q-w>
+</pre>
+</tt>
+
+  
+</body>
+</html>

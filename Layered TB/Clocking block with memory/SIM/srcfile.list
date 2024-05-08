@@ -1,0 +1,17 @@
+../ENV/mem_driv.sv
+../ENV/mem_env.sv
+../ENV/mem_gen.sv
+../ENV/mem_inter.sv
+../ENV/mem_moni.sv
+../ENV/mem_rfm.sv
+../ENV/mem_scr.sv
+../ENV/mem_trans.sv
+../RTL/ram_16x8.sv
+../TEST/mem_gen_b2b.sv
+../TEST/mem_gen_sanity.sv
+../TEST/mem_gen_simul.sv
+../TEST/mem_gen_sweep.sv
+../TEST/mem_gen_test1.sv
+../TEST/mem_pkg.sv
+../TEST/mem_test.sv
+../TOP/mem_top.sv
