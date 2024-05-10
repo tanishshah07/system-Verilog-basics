@@ -13,7 +13,6 @@
 `ifndef PKG_SV
 `define PKG_SV
 //`include "mem_def.sv"
-`include "mem_inter.sv"
 package pkg;
 event item_done;
 event reset_on;

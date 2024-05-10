@@ -34,6 +34,8 @@ event reset_on;
 `include "mem_gen_simul.sv"
 // Sweep test
 `include "mem_gen_sweep.sv"
+// Continuous Test
+`include "mem_gen_cont.sv"
 //driver
 `include "mem_driv.sv"
 //monitor

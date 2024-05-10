@@ -1,0 +1,53 @@
+////////////////////////////////////////////////
+//
+//Company_Name : Scaledge
+//Author_Name  : TANISH_SHAH
+//File_Name    : apb_pkg.sv
+//File_Path    : 
+              
+//Project_Name : APB SLAVE
+//Description  :
+//
+/////////////////////////////////////////////////
+`ifndef PKG_SV
+`define PKG_SV
+
+//`include "apb_def.sv"
+`include "apb_intf.sv"
+package pkg;
+
+event item_done;
+int no_of_trans=3;
+//define file
+
+`include "apb_def.sv"
+
+//trans file
+`include "apb_trans.sv"
+
+//generator file
+`include "apb_gen.sv"
+
+
+//driver
+`include "apb_driv.sv"
+
+//monitor
+
+`include "apb_mon.sv"
+//refrence model
+//`include "apb_rfm.sv"
+//
+//scoreboard
+//`include "apb_scr.sv"
+//
+//enviroment
+`include "apb_env.sv"
+
+//test
+`include "apb_test.sv"
+
+
+endpackage
+
+`endif

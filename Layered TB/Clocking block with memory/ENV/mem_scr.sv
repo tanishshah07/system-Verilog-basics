@@ -31,6 +31,7 @@ endfunction
      bins MED_DATA = {[86:170]};
      bins HIGH_DATA = {[171:255]};
     }
+
     RD_DATA : coverpoint trans.rd_data{
      bins LOW_DATA = {[1:85]};
      bins MED_DATA = {[86:170]};
@@ -63,8 +64,10 @@ endfunction
     RD_DATA7 : coverpoint trans.rd_data[7]{
       bins TRAN[] = (1=>0,0=>1);
     }
+    //macro??
     B2B : coverpoint trans.fnx_e{
-      bins B2B[] = {write->read,write->read};
+      bins B2B = {write->read->write->read}; ///??
+      //option.at_least(4);//?
     }
     RD_EN : coverpoint trans.fnx_e{
       bins RD = {read};
@@ -73,6 +76,10 @@ endfunction
       bins WR = {write};
     }
 
+    //enum transition coverpoint
+    //reset then output zero
+    //reset? bin 
+    //simultaneous
     CRW : cross WR_EN,WR_ADRR,WR_DATA;
     CRR : cross RD_EN,RD_ADRR,RD_DATA;
   endgroup
@@ -101,12 +108,14 @@ forever begin
     //else if ((trans.wr_data!=trans_exp.wr_data) && trans.fnx_e==2)  $display("scoreboard in write, failed %t",$time);
    end
    begin
-     #20;
+     #20; //timeout justify?
      $display("time out %t",$time);
    end
  
  join_any
- disable fork;
+ disable fork; //separete task for the same
+ //check reset also memory clear
+ 
   $display("count decremeted");
   drop_obj("DRESCR");
  //end

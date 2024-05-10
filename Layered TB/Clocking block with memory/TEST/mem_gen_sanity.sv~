@@ -22,25 +22,25 @@ bit [`ADDR_WID-1:0] que[$];
 
 task run_phase();
 // $display("perfect skeleton till top side of generatiro");
-  repeat(50) begin
+  repeat(32) begin
    trans=new();
 	//----------------------------------------------------------------
-	   if(count<25) begin 
+	   if(count<16) begin 
 		   if(!trans.randomize() with {trans.fnx_e==1;trans.wr_addr inside {0,15};}) begin
 		    $error("Randomization FAils");
 		   end
                    //trans.dis("Sanity generator");
-		   //trans.wr_data=8'd26;
+		   if (count==5) trans.wr_data=8'd26;
 		   que.push_back(trans.wr_addr);
 	   end
-	   else if(count>=25) begin 
-		   if(!trans.randomize() with {trans.fnx_e==2;trans.rd_addr==que[count-25];}) begin
+	   else if(count>=16) begin 
+		   if(!trans.randomize() with {trans.fnx_e==2;trans.rd_addr inside {0,15};}) begin
 		     $error("Randomization FAils");
 		   end
                    //trans.dis("Sanity generator");
 	   end
-  super.put_wait();
   count++;
+  super.put_wait();
   end
  endtask
 

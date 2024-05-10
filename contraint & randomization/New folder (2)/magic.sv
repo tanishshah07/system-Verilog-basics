@@ -1,0 +1,50 @@
+// Code your testbench here
+// or browse Examples
+class magicbox;
+  rand int unsigned arr[3][3];
+//   constraint con_c { 
+//     foreach(arr[i,j]){
+//       arr[i][j] inside {[0:9]}; 
+//     }
+//   };
+  //[0,0] 
+  constraint con_c1 { 
+    
+
+    foreach(arr[i,j]) {
+      
+      arr.sum with (item.index(1) == i ? int'(item): 0) == 15; // rows
+      //arr[i].sum == 15;
+      
+      arr.sum with (item.index(2) == j ? int'(item): 0) == 15; // cols
+        }
+    arr.sum with (item.index(1) == item.index(2) ? int'(item) : 0) == 32'd15; // diag1
+    arr.sum with ( (item.index(1) + item.index(2) == 2) ? int'(item) : 0) == 32'd15; // diag2
+      
+  };
+        
+endclass
+ 
+//row
+//column 
+
+// 0 
+
+
+module top;
+  magicbox m1;
+  
+  initial begin
+    m1 = new();
+    
+    m1.randomize();
+    foreach(m1.arr[i]) begin
+      foreach(m1.arr[i][j]) begin
+        $write(" %0d ",m1.arr[i][j]);
+    end
+      $display("");
+    end
+  end
+  
+  
+endmodule

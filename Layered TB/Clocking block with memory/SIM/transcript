@@ -1,5 +1,5 @@
 # vsim -vopt -coverage mem_top -suppress 12110 "+B2B" -c -do "coverage save -onexit -directive -cvg -codeall test5.ucdb; run -all; exit" 
-# Start time: 16:50:24 on May 08,2024
+# Start time: 17:41:45 on May 08,2024
 # ** Note: (vsim-8009) Loading existing optimized design _opt1
 # //  Questa Sim-64
 # //  Version 10.7c win64 Aug 18 2018
@@ -1984,5 +1984,5 @@
 # ** Note: $finish    : ../TOP/mem_top.sv(65)
 #    Time: 525 ns  Iteration: 0  Instance: /mem_top
 # Saving coverage database on exit...
-# End time: 16:50:27 on May 08,2024, Elapsed time: 0:00:03
+# End time: 17:41:48 on May 08,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 1

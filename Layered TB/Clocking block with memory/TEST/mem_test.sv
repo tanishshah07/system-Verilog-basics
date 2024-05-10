@@ -7,9 +7,9 @@ mem_env env;
 mem_gen_test_ibr gen_ibr; //In between reset
 mem_gen_sanity sanity;  //Sanity
 mem_gen_b2b b2b;         // back 2 back
-mem_gen_simul simul;
-mem_gen_sweep swp;
-
+mem_gen_simul simul;    //simultaneous
+mem_gen_sweep swp;      //sweep
+mem_gen_cont cont;     //continuous
 
 function void connect(virtual mem_intf vif);
 
@@ -35,7 +35,10 @@ if($test$plusargs("SWWP")) begin
    swp=new();
    env.gen=swp;
 end
-
+if($test$plusargs("CONT")) begin 
+   cont=new();
+   env.gen=cont;
+end
 	this.vif=vif;
 	env.connect(this.vif);
 endfunction

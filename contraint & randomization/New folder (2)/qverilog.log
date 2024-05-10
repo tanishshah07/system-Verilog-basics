@@ -1,0 +1,25 @@
+Start time: 13:43:10 on May 10,2024
+qverilog magic.sv 
+** Warning: magic.sv(42): (qverilog-2897) Using non-standard foreach loop variable list syntax.
+-- Compiling package magic_sv_unit
+** Error: magic.sv(22): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(22): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(21): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(21): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(19): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(19): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(16): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(16): Bit stream casting is only allowed on same size data.
+-- Compiling module top
+** Warning: magic.sv(42): (qverilog-2897) Using non-standard foreach loop variable list syntax.
+** Error: magic.sv(22): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(22): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(21): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(21): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(19): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(19): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(16): Bit stream casting is only allowed on same size data.
+** Error: magic.sv(16): Bit stream casting is only allowed on same size data.
+** Warning: magic.sv(40): (qverilog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+End time: 13:43:10 on May 10,2024, Elapsed time: 0:00:00
+Errors: 16, Warnings: 3

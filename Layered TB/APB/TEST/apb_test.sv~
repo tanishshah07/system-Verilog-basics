@@ -1,0 +1,26 @@
+////////////////////////////////////////////////
+//
+//Company_Name : Scaledge
+//Author_Name  : TANISH_SHAH
+//File_Name    : abp_test.sv
+//File_Path    : 
+//Class_Name   : apb_env              
+//Project_Name : APB SLAVE
+//Description  :
+//
+/////////////////////////////////////////////////
+
+class apb_test;
+ apb_env env;
+ function void build();
+  env=new();
+    env.build();
+ endfunction
+
+ function void connect();
+   env.connect(); 	 
+ endfunction
+ task run_phase();
+   env.run_phase();
+ endtask
+endclass	

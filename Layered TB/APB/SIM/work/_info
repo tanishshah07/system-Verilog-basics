@@ -1,0 +1,113 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/indicus_material/SV_at_indicus/Layered TB/APB/SIM
+Yapb_intf
+Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 WNTeU3?_<2JhJ>`Mm`_BS0
+IYQ5OH7GOX7zGKfGAfP`FD1
+Z3 !s105 apb_top_sv_unit
+S1
+R0
+w1715321341
+8../ENV/apb_intf.sv
+F../ENV/apb_intf.sv
+Z4 L0 17
+Z5 OL;L;10.7c;67
+31
+Z6 !s108 1715329735.000000
+Z7 !s107 ../TEST/apb_test.sv|../ENV/apb_env.sv|../ENV/apb_rfm.sv|../ENV/apb_mon.sv|../ENV/apb_driv.sv|../ENV/apb_gen.sv|../ENV/apb_trans.sv|../ENV/apb_def.sv|../ENV/apb_intf.sv|../TOP/apb_top.sv|../TEST/apb_pkg.sv|../RTL/apb.v|
+Z8 !s90 -reportprogress|300|../RTL/apb.v|../TEST/apb_pkg.sv|../TOP/apb_top.sv|+incdir+../ENV|+incdir+../TEST|
+!i113 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 !s92 +incdir+../ENV +incdir+../TEST -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 tCvgOpt 0
+vAPB_slave
+R2
+r1
+!s85 0
+!i10b 1
+!s100 bH??_Xi_h8S<X_L:T@<U;2
+IZEFzOiJG;eXIS]ZP55`Vf2
+R0
+w1715329584
+8../RTL/apb.v
+F../RTL/apb.v
+L0 3
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R11
+n@a@p@b_slave
+vapb_top
+R1
+DXx4 work 3 pkg 0 22 ;;VCC5oWYl4_1m3K;?mfL1
+R2
+r1
+!s85 0
+!i10b 1
+!s100 ;h5A:l:_dPBVa`0W5QFWV1
+Im0o_0OAOb8mT09BDFhz`k3
+R3
+S1
+R0
+w1715320845
+8../TOP/apb_top.sv
+F../TOP/apb_top.sv
+R4
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R11
+Xpkg
+!s115 apb_intf
+R1
+V;;VCC5oWYl4_1m3K;?mfL1
+r1
+!s85 0
+!i10b 1
+!s100 X7jhM2`2AVK60c<U[X;fl3
+I;;VCC5oWYl4_1m3K;?mfL1
+S1
+R0
+w1715329732
+8../TEST/apb_pkg.sv
+F../TEST/apb_pkg.sv
+F../ENV/apb_def.sv
+F../ENV/apb_trans.sv
+F../ENV/apb_gen.sv
+F../ENV/apb_driv.sv
+F../ENV/apb_mon.sv
+F../ENV/apb_rfm.sv
+F../ENV/apb_env.sv
+F../TEST/apb_test.sv
+R4
+R5
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R11
