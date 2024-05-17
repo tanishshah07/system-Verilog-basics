@@ -11,11 +11,10 @@
 /////////////////////////////////////////////////
 `ifndef DEF_SV
 `define DEF_SV
-typedef enum {read,write,IDLE} funct;
+typedef enum {pread,pwrite,prstn} funct;
 parameter DEP=32,
 	  AW = 5,
 	  DW = 32;
+parameter TIME_OUT=20;  
 parameter SKW_T =1; 
 `endif
-
-

@@ -19,6 +19,7 @@ forever begin
  // raise_obj("RFM");	
   mon2rfm.get(trans);
   
+  raise_obj("RFM");	
   //#1;
  // $display("inside ref");
   trans.dis("RFM");
@@ -44,6 +45,7 @@ forever begin
 
   $display("count decremeted");
   rfm2scr.put(trans);
+  drop_obj("DRERFM");
   end
 
  //#1;

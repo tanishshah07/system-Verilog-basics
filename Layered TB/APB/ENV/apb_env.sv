@@ -17,6 +17,7 @@
   mailbox #(apb_trans) mon2rfm=new();
   mailbox #(apb_trans) mon2scr=new();
   mailbox #(apb_trans) rfm2scr=new();
+  mailbox #(apb_trans) mon2fc=new();
 
   
   // components
@@ -24,31 +25,34 @@
   apb_drv drv;
   apb_mon mon;
   apb_rfm rfm;
-  //apb_scr scr;
-
-  function void build();
+  apb_scr scr;
+  apb_fc  fc;
+ virtual function void build();
     gen=new();
     drv=new();
     mon=new();
     rfm=new();
-    //scr=new();
+    scr=new();
+    fc =new();
   endfunction
 
-  function void connect(virtual apb_intf vif);
+ virtual function void connect(virtual apb_intf vif);
    gen.connect(gen2drv);
    drv.connect(gen2drv,vif);
    mon.connect(mon2rfm,mon2scr,vif);
    rfm.connect(mon2rfm,rfm2scr);
-   //scr.connect(mon2scr,rfm2scr);
+   scr.connect(mon2scr,rfm2scr);
+   //fc.connect(mon2fc);
   endfunction
 
-  task run_phase();
+ virtual task run_phase();
    fork
      gen.run_phase();
      drv.run_phase();
      mon.run_phase();
      rfm.run_phase();
-     //scr.run_phase();
+     scr.run_phase();
+     //fc.run_phase();
    join_any
   endtask
  

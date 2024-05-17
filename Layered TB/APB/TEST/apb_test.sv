@@ -12,13 +12,32 @@
 
 class apb_test;
  apb_env env;
+apb_gen_sanityw sw;
+apb_gen_sanityr sr;
+apb_gen_reset_b rb;
  virtual apb_intf vif;
  function void build();
   env=new();
     env.build();
  endfunction
 
+
  function void connect(virtual apb_intf vif);
+	 if($test$plusargs("SANITYW")) begin
+	   sw=new();
+	   env.gen=sw;
+	 end
+	 if($test$plusargs("SANITYR")) begin
+	   sr=new();
+	   env.gen=sr;
+	 end
+         if($test$plusargs("RESET_B")) begin
+	   rb=new();
+	   env.gen=rb;
+	 end
+	 
+	 
+	 
 	 this.vif=vif;
    env.connect(this.vif); 	 
  endfunction

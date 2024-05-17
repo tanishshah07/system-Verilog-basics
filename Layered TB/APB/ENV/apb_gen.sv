@@ -19,18 +19,18 @@
 	 this.gen2drv=gen2drv;
  endfunction
  
-task put_wait();
+protected task put_wait();
  gen2drv.put(trans);
  @(item_done);
 endtask	
 
- task run_phase();
-  repeat(no_of_trans) begin
-   trans=new();
-   if(!trans.randomize() with {trans.fnx_e==1;}) $fatal("Randomization Fails");
-   trans.dis("generator");
-   put_wait();
-  end
+virtual task run_phase();
+//  repeat(no_of_trans) begin
+//   trans=new();
+//   if(!trans.randomize() with {trans.fnx_e==1;}) $fatal("Randomization Fails"
+//   trans.dis("generator");
+//   put_wait();
+//  end
  endtask
  
  endclass

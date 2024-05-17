@@ -23,32 +23,32 @@
   apb_gen gen;
   apb_drv drv;
   apb_mon mon;
-  //apb_rfm rfm;
-  //apb_scr scr;
+  apb_rfm rfm;
+  apb_scr scr;
 
-  function void build();
+ virtual function void build();
     gen=new();
     drv=new();
     mon=new();
-    //rfm=new();
-    //scr=new();
+    rfm=new();
+    scr=new();
   endfunction
 
-  function void connect(virtual apb_intf vif);
+ virtual function void connect(virtual apb_intf vif);
    gen.connect(gen2drv);
    drv.connect(gen2drv,vif);
    mon.connect(mon2rfm,mon2scr,vif);
-   //rfm.connect(mon2rfm,rfm2scr);
-   //scr.connect(mon2scr,rfm2scr);
+   rfm.connect(mon2rfm,rfm2scr);
+   scr.connect(mon2scr,rfm2scr);
   endfunction
 
-  task run_phase();
+ virtual task run_phase();
    fork
      gen.run_phase();
      drv.run_phase();
      mon.run_phase();
-     //rfm.run_phase();
-     //scr.run_phase();
+     rfm.run_phase();
+     scr.run_phase();
    join_any
   endtask
  

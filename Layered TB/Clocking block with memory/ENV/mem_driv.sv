@@ -28,9 +28,9 @@ task run_phase();
 forever begin
 
  fork
-   begin:rst_b
+   begin
     wait(vif.drv_cb.rst==1);
-    disable drv_b;
+   // @(posedge vif.drv_cb.rst);
     vif.drv_cb.wr_enb<=0;	 
     vif.drv_cb.rd_enb<=0;
     vif.drv_cb.rd_addr<='d0;
@@ -38,7 +38,7 @@ forever begin
     vif.drv_cb.wr_data<='d0;
     @(negedge vif.clk);
    end
-   begin:drv_b
+   begin
      @(vif.drv_cb);
 
  //$display("inside side else of if %b @ %t",vif.drv_cb.rst,$time);
@@ -72,11 +72,10 @@ forever begin
           vif.drv_cb.rd_enb<=0;
 	 end
    endcase
-   disable rst_b;
    ->item_done;
    end
- join
- //disable fork;
+ join_any
+ disable fork;
 
  /*
  //wait();

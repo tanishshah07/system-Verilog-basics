@@ -1,4 +1,4 @@
 var g_db_data = [
 {dummy:0},
-{name:'cvg',f:1,type:6,id:25,tb:'57',h:'53',m:'4',hp:'92.98%',cov:['98.43%','G'],g:'100.00%',gp:['98.43%','G'],hdlPath:'/pkg/mem_scr',parent:'24'}];
+{name:'cvg',f:1,type:6,id:25,tb:'90',h:'77',m:'13',hp:'85.55%',cov:['96.06%','G'],g:'100.00%',gp:['96.06%','G'],hdlPath:'/pkg/mem_scr',parent:'24'}];
 processConsCovergroupsData(g_db_data);

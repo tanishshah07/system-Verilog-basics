@@ -1,11 +1,11 @@
 vlib work
 vlog -coveropt 3 +acc +cover ../RTL/ram_16x8.sv ../TEST/mem_pkg.sv ../TOP/mem_top.sv +incdir+../ENV +incdir+../TEST
-//vsim -novopt mem_top -suppress 12110 +SANITY +IBR
-//vsim -vopt -coverage mem_top -suppress 12110 +SANITY
-//do wave.do
-//run -all
-vsim -vopt -coverage mem_top -suppress 12110 +SWWP
-//vsim -vopt -coverage mem_top -suppress 12110 +IBR
-//vsim -vopt -coverage mem_top -suppress 12110 +SIMUL
+#vsim -novopt mem_top -suppress 12110 +SANITY +IBR
+#vsim -vopt -coverage mem_top -suppress 12110 +SANITY
+#do wave.do
+#run -all
+#vsim -vopt -coverage mem_top -suppress 12110 +SWWP
+vsim -vopt -coverage mem_top -suppress 12110 +IBR
+#vsim -vopt -coverage mem_top -suppress 12110 +SIMUL
 do wave.do
 run -all

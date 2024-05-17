@@ -13,36 +13,48 @@
 `define RFM_SV
 
 class apb_rfm;
- apb_trans trans;
+ apb_trans trans,trans_exp;
  mailbox #(apb_trans) mon2rfm;
  mailbox #(apb_trans) rfm2scr;
 
 //refrence memory
-bit [DW-1:0] mem_r [0:DEP-22];
- function void connect(mailbox #(apb_trans) mon2rfm,mailbox #(apb_trans) rfm2scr);
+bit [DW-1:0] mem_r [int];
+virtual function void connect(mailbox #(apb_trans) mon2rfm,mailbox #(apb_trans) rfm2scr);
     this.mon2rfm=mon2rfm;
     this.rfm2scr=rfm2scr;
-    trans=new();
  endfunction
 
- task run_phase();
-  
+virtual task run_phase(); 
   forever begin
      mon2rfm.get(trans);
+     trans_exp=new trans;
+     fork
+     pslverr_generate();
      rfm();
-     rfm2scr.put(trans);
+     join
+     rfm2scr.put(trans_exp);
      trans.dis("inside RFM");
   end
  endtask
 
  task rfm();
-  if(trans.fnx_e==2) begin
+  if(trans_exp.fnx_e==2) begin
+    mem_r.delete();
+  end
+  else if(trans_exp.fnx_e==1) begin
      mem_r[trans.paddr]=trans.pwdata;
   end
-  else if(trans.fnx_e==1) begin
-     trans.prdata=mem_r[trans.paddr];
+  else if(trans_exp.fnx_e==0) begin
+     if(mem_r.exists(trans.paddr)) begin
+       trans.prdata=mem_r[trans.paddr];
+     end
   end
  endtask
   
+ task pslverr_generate();
+   if(trans.paddr>21) begin
+     trans.pslverr=1;
+   end
+ endtask
 endclass
 `endif

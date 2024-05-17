@@ -18,7 +18,7 @@ task run_phase();
 forever begin
  // raise_obj("RFM");	
   mon2rfm.get(trans);
-  
+ //mailbox returns the value can be used as a checker 
   raise_obj("RFM");	
   //#1;
  // $display("inside ref");

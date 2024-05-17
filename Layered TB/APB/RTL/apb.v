@@ -79,7 +79,7 @@ integer i;
 
 					$display($time,"write state");
 		             // logic for wait next_state
- 		      		   if(WAIT_PR>=0) begin
+ 		      		   if(WAIT_PR>0) begin
 					   $display($time,"WITH WAIT state");
 					   pready=1'b0; 
 					   repeat(WAIT_PR)@(posedge pclk);

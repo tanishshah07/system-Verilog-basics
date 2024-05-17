@@ -25,7 +25,7 @@ integer i;
 // design working at the posedge of clk and reset is active low and synchronized
   always@(posedge pclk)
   begin
-	      			$display($time,"Inside always blockte");
+	      		//	$display($time,"Inside always blockte");
    //reset :(to bring design into known state) making prdata,pready,pslverr low and initializing memory
    if(!presetn) begin               
 	 			prdata<=0;

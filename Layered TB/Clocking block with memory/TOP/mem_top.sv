@@ -60,16 +60,21 @@ begin
  test.build();
  test.connect(intf);
  test.run_phase();
- #20;
- //if(obj_cnt==0) 
+// #20;
+fork
+begin
+ if(obj_cnt==0)
+  #10; //as it finishes at posedge of clk 
   $finish;
  end
-//begin
+begin
  //#1ms;
-//end
- //join_any
-//disable fork;
-//$finish;
+ #DRAIN_T;
+end
+join_any
+disable fork;
+$finish;
+end
 endtask
 
 endmodule

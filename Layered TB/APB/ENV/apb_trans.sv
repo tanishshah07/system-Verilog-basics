@@ -19,8 +19,12 @@ rand bit [DW-1:0] pwdata;
 bit [DW-1:0] prdata;
 //bit pwrite=fnx_e; //$cast ??
 bit pwrite;
+bit pslverr;
 constraint invalid_addr{
-  paddr inside {[0:20]};
+ paddr inside {[0:20]};
+}
+constraint reset_not_randomize{
+  fnx_e!=2;
 }
 function void post_randomize();
  $cast(pwrite,fnx_e);
@@ -32,6 +36,7 @@ $display("#########################################");
  $display($time,"\tFunction\t\t%s",fnx_e.name);
  $display($time,"\tpaddr\t\t%b",paddr);
  $display($time,"\tpwrite\t\t%b",pwrite);
+ $display($time,"\tpslverr\t\t%b",pslverr);
  $display($time,"\tpwdata\t\t%b",pwdata);
  $display($time,"\tprdata\t\t%b",prdata);
 $display("#########################################");

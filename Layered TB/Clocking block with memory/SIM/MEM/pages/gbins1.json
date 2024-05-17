@@ -1,23 +1,30 @@
 var g_data = {
-c44:[4,'RD_ADRR',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','33',,'LOW_ADDR'],[0,'1','26',,'MED_ADDR'],[0,'1','39',,'HIGH_ADDR'],[0,'1','88',,'MAX_MIN[0]'],[0,'1','14',,'MAX_MIN[15]']],[]],
-c45:[4,'WR_ADRR',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','33',,'LOW_ADDR'],[0,'1','26',,'MED_ADDR'],[0,'1','40',,'HIGH_ADDR'],[0,'1','87',,'MAX_MIN[0]'],[0,'1','14',,'MAX_MIN[15]']],[]],
-c46:[4,'WR_DATA',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','32',,'LOW_DATA'],[0,'1','30',,'MED_DATA'],[0,'1','43',,'HIGH_DATA']],[]],
-c47:[4,'RD_DATA',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','27',,'LOW_DATA'],[0,'1','29',,'MED_DATA'],[0,'1','31',,'HIGH_DATA']],[]],
-c48:[4,'RD_DATA0',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','19',,'TRAN[1=>0=>1]']],[]],
-c49:[4,'RD_DATA1',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','15',,'TRAN[1=>0=>1]']],[]],
-c50:[4,'RD_DATA2',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','8',,'TRAN[1=>0=>1]']],[]],
-c51:[4,'RD_DATA3',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','16',,'TRAN[1=>0=>1]']],[]],
-c52:[4,'RD_DATA4',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','11',,'TRAN[1=>0=>1]']],[]],
-c53:[4,'RD_DATA5',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','9',,'TRAN[1=>0=>1]']],[]],
-c54:[4,'RD_DATA6',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','16',,'TRAN[1=>0=>1]']],[]],
-c55:[4,'RD_DATA7',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','10',,'TRAN[1=>0=>1]']],[]],
-c56:[4,'B2B',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','55',,'B2B[write]']],[]],
-c57:[4,'RD_EN',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','59',,'RD']],[]],
-c58:[4,'WR_EN',[],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','55',,'WR']],[]],
-c59:[5,'CRW',['WR_EN','WR_ADRR','WR_DATA'],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[4,'1','7',,'WR','HIGH_ADDR','LOW_DATA'],[4,'1','3',,'WR','MAX_MIN[0]','LOW_DATA'],[4,'1','3',,'WR','MAX_MIN[15]','LOW_DATA'],[4,'1','7',,'WR','HIGH_ADDR','MED_DATA'],[4,'1','1',,'WR','MAX_MIN[0]','MED_DATA'],[4,'1','4',,'WR','MAX_MIN[15]','MED_DATA'],[4,'1','11',,'WR','HIGH_ADDR','HIGH_DATA'],[4,'1','1',,'WR','MAX_MIN[0]','HIGH_DATA'],[4,'1','5',,'WR','MAX_MIN[15]','HIGH_DATA'],[4,'1','2',,'WR','LOW_ADDR','LOW_DATA']
+c49:[4,'RD_ADRR',[],'this is for the read address range and the boundary conditions','48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','31',,'LOW_ADDR'],[0,'1','26',,'MED_ADDR'],[0,'1','38',,'HIGH_ADDR'],[0,'1','79',,'MAX_MIN[0]'],[0,'1','13',,'MAX_MIN[15]']],[]],
+c50:[4,'WR_ADRR',[],'this is for the write address range and the boundary conditions','48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','33',,'LOW_ADDR'],[0,'1','25',,'MED_ADDR'],[0,'1','40',,'HIGH_ADDR'],[0,'1','76',,'MAX_MIN[0]'],[0,'1','14',,'MAX_MIN[15]']],[]],
+c51:[4,'WR_DATA',[],'this is for the write data range','48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','32',,'LOW_DATA'],[0,'1','29',,'MED_DATA'],[0,'1','43',,'HIGH_DATA']],[]],
+c52:[4,'RD_DATA',[],'this is for the read data range','48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','26',,'LOW_DATA'],[0,'1','26',,'MED_DATA'],[0,'1','31',,'HIGH_DATA']],[]],
+c53:[4,'RD_DATA0',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','18',,'TRAN[1=>0=>1]']],[]],
+c54:[4,'RD_DATA1',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','15',,'TRAN[1=>0=>1]']],[]],
+c55:[4,'RD_DATA2',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','7',,'TRAN[1=>0=>1]']],[]],
+c56:[4,'RD_DATA3',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','16',,'TRAN[1=>0=>1]']],[]],
+c57:[4,'RD_DATA4',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','10',,'TRAN[1=>0=>1]']],[]],
+c58:[4,'RD_DATA5',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','9',,'TRAN[1=>0=>1]']],[]],
+c59:[4,'RD_DATA6',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','16',,'TRAN[1=>0=>1]']],[]],
+c60:[4,'RD_DATA7',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','10',,'TRAN[1=>0=>1]']],[]],
+c61:[4,'B2B',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','55',,'B2B']],[]],
+c62:[4,'TRANS',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','55',,'TRANS[write]']],[]],
+c63:[4,'RD_EN',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','56',,'RD']],[]],
+c64:[4,'WR_EN',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','55',,'WR']],[]],
+c65:[4,'SIMUL',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','49',,'SIMUL']],[]],
+c66:[4,'RESET',[],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[0,'1','7',,'RRD']],[]],
+c67:[5,'CRW',['WR_EN','WR_ADRR','WR_DATA'],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[4,'1','7',,'WR','HIGH_ADDR','LOW_DATA'],[4,'1','3',,'WR','MAX_MIN[0]','LOW_DATA'],[4,'1','3',,'WR','MAX_MIN[15]','LOW_DATA'],[4,'1','7',,'WR','HIGH_ADDR','MED_DATA'],[4,'1','1',,'WR','MAX_MIN[0]','MED_DATA'],[4,'1','4',,'WR','MAX_MIN[15]','MED_DATA'],[4,'1','11',,'WR','HIGH_ADDR','HIGH_DATA'],[4,'1','1',,'WR','MAX_MIN[0]','HIGH_DATA'],[4,'1','5',,'WR','MAX_MIN[15]','HIGH_DATA'],[4,'1','2',,'WR','LOW_ADDR','LOW_DATA']
 ,[4,'1','5',,'WR','MED_ADDR','LOW_DATA'],[4,'1','4',,'WR','MED_ADDR','MED_DATA'],[4,'1','10',,'WR','LOW_ADDR','HIGH_DATA'],[4,'1','2',,'WR','MED_ADDR','HIGH_DATA'],[4,'1','2',,'WR','LOW_ADDR','MED_DATA']],[[]]],
-c60:[5,'CRR',['RD_EN','RD_ADRR','RD_DATA'],,'43',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[4,'1','6',,'RD','MAX_MIN[0]','LOW_DATA'],[4,'1','15',,'RD','HIGH_ADDR','MED_DATA'],[4,'1','12',,'RD','MAX_MIN[15]','MED_DATA'],[4,'1','2',,'RD','LOW_ADDR','LOW_DATA'],[4,'1','5',,'RD','MED_ADDR','LOW_DATA'],[4,'1','4',,'RD','HIGH_ADDR','LOW_DATA'],[4,'1','4',,'RD','MED_ADDR','MED_DATA'],[4,'1','10',,'RD','LOW_ADDR','HIGH_DATA'],[4,'1','2',,'RD','MED_ADDR','HIGH_DATA'],[4,'1','5',,'RD','HIGH_ADDR','HIGH_DATA']
-,[4,'1','2',,'RD','LOW_ADDR','MED_DATA']],[[],[4,'1','0',1,'RD','MAX_MIN[15]','LOW_DATA'],[4,'1','0',1,'RD','MAX_MIN[0]','MED_DATA'],[4,'1','0',1,'RD','MAX_MIN[0]','HIGH_DATA'],[4,'1','0',1,'RD','MAX_MIN[15]','HIGH_DATA']]],
+c68:[5,'CRR',['RD_EN','RD_ADRR','RD_DATA'],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[4,'1','5',,'RD','MAX_MIN[0]','LOW_DATA'],[4,'1','14',,'RD','HIGH_ADDR','MED_DATA'],[4,'1','11',,'RD','MAX_MIN[15]','MED_DATA'],[4,'1','2',,'RD','LOW_ADDR','LOW_DATA'],[4,'1','5',,'RD','MED_ADDR','LOW_DATA'],[4,'1','4',,'RD','HIGH_ADDR','LOW_DATA'],[4,'1','4',,'RD','MED_ADDR','MED_DATA'],[4,'1','10',,'RD','LOW_ADDR','HIGH_DATA'],[4,'1','2',,'RD','MED_ADDR','HIGH_DATA'],[4,'1','5',,'RD','HIGH_ADDR','HIGH_DATA']
+,[4,'1','1',,'RD','LOW_ADDR','MED_DATA']],[[],[4,'1','0',1,'RD','MAX_MIN[15]','LOW_DATA'],[4,'1','0',1,'RD','MAX_MIN[0]','MED_DATA'],[4,'1','0',1,'RD','MAX_MIN[0]','HIGH_DATA'],[4,'1','0',1,'RD','MAX_MIN[15]','HIGH_DATA']]],
+c69:[5,'CRSR',['SIMUL','RD_ADRR','RD_DATA'],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[4,'1','7',,'SIMUL','LOW_ADDR','LOW_DATA'],[4,'1','3',,'SIMUL','MED_ADDR','LOW_DATA'],[4,'1','1',,'SIMUL','LOW_ADDR','MED_DATA'],[4,'1','2',,'SIMUL','MED_ADDR','MED_DATA'],[4,'1','4',,'SIMUL','HIGH_ADDR','MED_DATA'],[4,'1','1',,'SIMUL','MAX_MIN[15]','MED_DATA'],[4,'1','5',,'SIMUL','LOW_ADDR','HIGH_DATA'],[4,'1','6',,'SIMUL','MED_ADDR','HIGH_DATA'],[4,'1','3',,'SIMUL','HIGH_ADDR','HIGH_DATA']],[[],[4,'1','0',1,'SIMUL','HIGH_ADDR','LOW_DATA']
+,[4,'1','0',1,'SIMUL','MAX_MIN[0]','LOW_DATA'],[4,'1','0',1,'SIMUL','MAX_MIN[15]','LOW_DATA'],[4,'1','0',1,'SIMUL','MAX_MIN[0]','MED_DATA'],[4,'1','0',1,'SIMUL','MAX_MIN[0]','HIGH_DATA'],[4,'1','0',1,'SIMUL','MAX_MIN[15]','HIGH_DATA']]],
+c70:[5,'CRSW',['SIMUL','WR_ADRR','WR_DATA'],,'48',2,1,'\\/pkg::mem_scr::cvg ','24','/pkg/mem_scr',[[],[4,'1','4',,'SIMUL','MED_ADDR','MED_DATA'],[4,'1','6',,'SIMUL','LOW_ADDR','LOW_DATA'],[4,'1','6',,'SIMUL','MED_ADDR','LOW_DATA'],[4,'1','3',,'SIMUL','HIGH_ADDR','LOW_DATA'],[4,'1','3',,'SIMUL','LOW_ADDR','MED_DATA'],[4,'1','7',,'SIMUL','HIGH_ADDR','MED_DATA'],[4,'1','1',,'SIMUL','MAX_MIN[0]','MED_DATA'],[4,'1','1',,'SIMUL','MAX_MIN[15]','MED_DATA'],[4,'1','10',,'SIMUL','LOW_ADDR','HIGH_DATA'],[4,'1','4',,'SIMUL','MED_ADDR','HIGH_DATA']
+,[4,'1','5',,'SIMUL','HIGH_ADDR','HIGH_DATA'],[4,'1','1',,'SIMUL','MAX_MIN[15]','HIGH_DATA']],[[],[4,'1','0',1,'SIMUL','MAX_MIN[0]','LOW_DATA'],[4,'1','0',1,'SIMUL','MAX_MIN[15]','LOW_DATA'],[4,'1','0',1,'SIMUL','MAX_MIN[0]','HIGH_DATA']]],
 dummyEnd:0
 };
 processCovergroupsData(g_data);

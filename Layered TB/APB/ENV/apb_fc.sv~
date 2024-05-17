@@ -1,0 +1,22 @@
+////////////////////////////////////////////////
+//
+//Company_Name : Scaledge
+//Author_Name  : TANISH_SHAH
+//File_Name    : apb_fc.sv
+//File_Path    : 
+//Class_Name   : apb_fc              
+//Project_Name : APB SLAVE
+//Description  :
+//
+/////////////////////////////////////////////////
+`ifndef FC_SV
+`define FC_SV
+
+
+class apb_fc;
+mailbox #(apb_trans) mon2fc;
+
+
+endclass
+
+`endif

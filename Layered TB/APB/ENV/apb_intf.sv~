@@ -15,8 +15,8 @@
 `define INF_SV
  
 interface apb_intf(input pclk,prstn);
- logic [4:0] paddr;
- logic [31:0] pwdata,prdata;
+ logic [AW-1:0] paddr;
+ logic [DW-1:0] pwdata,prdata;
  logic pwrite;
  logic psel;
  logic penable;
@@ -24,7 +24,7 @@ interface apb_intf(input pclk,prstn);
  logic pslverr;
 
 clocking drv_cb@(posedge pclk);
-  default input #1 output #1;
+  default input #SKW_T output #SKW_T;
   output psel,penable,pwrite;
   output pwdata,paddr;
   input pready;
@@ -32,12 +32,12 @@ clocking drv_cb@(posedge pclk);
 endclocking
 
 clocking mon_cb@(posedge pclk);
-  default input #1 output #1;
-  input psel,penable,pwrite,pready;
-  input pwdata,paddr;
+  default input #SKW_T output #SKW_T;
+  input psel,penable,pwrite,pready,prstn,pslverr;
+  input pwdata,paddr,prdata;
 endclocking
 
-//modport DRV(clocking drv_cb);
-//modport MON(clocking mon_cb);
+modport DRV(clocking drv_cb,input prstn);
+modport MON(clocking mon_cb);
 endinterface
 `endif

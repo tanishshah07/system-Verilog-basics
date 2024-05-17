@@ -19,23 +19,66 @@ class apb_mon;
 
  virtual apb_intf vif;
 
-function void connect (mailbox #(apb_trans) mon2rfm,mailbox #(apb_trans) mon2scr,virtual apb_intf vif);
+virtual function void connect (mailbox #(apb_trans) mon2rfm,mailbox #(apb_trans) mon2scr,virtual apb_intf vif);
 	this.mon2rfm=mon2rfm;
 	this.mon2scr=mon2scr;
 	this.vif=vif;
 endfunction
 
 
-task run_phase();
+virtual task run_phase();
 
 	forever begin
 	 trans=new();
 	 @(vif.mon_cb);
-	 $cast(trans.fnx_e,1);
-	 trans.pwdata=vif.mon_cb.pwdata;
-	 trans.paddr=vif.mon_cb.paddr;
+ 
+      fork
+      begin
+	  wait_for_reset_assert(); //waiting for the reset to zero
+          reset_asserted();
+         $cast(trans.fnx_e,2);
 	 trans.dis("inside Monitior");
-	end
+	 mon2rfm.put(trans);
+	 mon2scr.put(trans);
+      end
+       begin
+	if(vif.mon_cb.penable==1 && vif.mon_cb.psel==1) begin
+	  wait(vif.mon_cb.pready==1);
+	  if(!vif.mon_cb.prstn) begin
+	    $cast(trans.fnx_e,2);
+	  end
+	  else begin
+	   $cast(trans.fnx_e,vif.mon_cb.pwrite);
+	   trans.pwrite=vif.mon_cb.pwrite;
+	   trans.pwdata=vif.mon_cb.pwdata;
+	   trans.paddr=vif.mon_cb.paddr;
+	   trans.prdata=vif.mon_cb.prdata;
+	   trans.pslverr=vif.mon_cb.pslverr;
+	   trans.dis("inside Monitior");
+	   mon2rfm.put(trans);
+	   mon2scr.put(trans);
+         end
+        end
+       end
+       join_any
+       disable fork;
+	 //trans.dis("inside Monitior");
+	 //mon2rfm.put(trans);
+	 //mon2scr.put(trans);
+
+ end
 endtask
+
+task wait_for_reset_assert();
+  wait(vif.mon_cb.prstn==0);
+endtask
+
+task reset_asserted();
+         $cast(trans.fnx_e,2);
+	 trans.dis("inside Monitior");
+	 mon2rfm.put(trans);
+	 mon2scr.put(trans);
+endtask
+
 endclass
 `endif

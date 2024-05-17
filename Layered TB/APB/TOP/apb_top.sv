@@ -11,7 +11,7 @@
 /////////////////////////////////////////////////
 `ifndef TOP_SV
 `define TOP_SV
-//`include "apb_def.sv"
+`include "apb_def.sv"
 `include "apb_intf.sv"
 
 module apb_top();
@@ -38,7 +38,10 @@ apb_test test;
 
 initial begin
 //#20;
+fork
+reset();
 run_test();
+join
 end
 
 initial begin
@@ -46,11 +49,27 @@ initial begin
   #5 pclk=~pclk;
  end
 end
+
+//initial begin
+// prstn=0;
+// #10;
+// prstn=1; //for testing purpose FIX_MEE
+//end
+
 initial begin
- prstn=0;
- #10;
- prstn=1; //for testing purpose FIX_MEE
+ forever begin
+  @(reset_on);
+  reset();
+ end
+
 end
+
+task reset();
+ #SKW_T;
+ prstn=0;
+ #20;
+ prstn=1;
+endtask
 
 task run_test();
  test=new();
